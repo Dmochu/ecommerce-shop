@@ -342,5 +342,31 @@
       "content": "Administrator zastrzega sobie prawo do wprowadzania zmian w polityce prywatności. O wszelkich zmianach użytkownicy będą informowani poprzez komunikat na stronie sklepu lub wiadomość e-mail."
     },
     "lastUpdated": "Ostatnia aktualizacja"
+  },
+  "returnForm": {
+    "title": "Formularz zwrotu",
+    "subtitle": "Wypełnij formularz, aby złożyć wniosek o zwrot produktu",
+    "orderNumber": "Numer zamówienia",
+    "customerName": "Imię i nazwisko",
+    "email": "Email",
+    "phone": "Telefon",
+    "address": "Adres",
+    "city": "Miasto",
+    "postalCode": "Kod pocztowy",
+    "country": "Kraj",
+    "isBusiness": "Firma",
+    "companyName": "Nazwa firmy",
+    "nip": "NIP",
+    "reason": "Powód zwrotu",
+    "description": "Opis",
+    "priority": "Priorytet",
+    "preferredContactMethod": "Preferowana metoda kontaktu",
+    "orderDate": "Data zamówienia",
+    "returnReason": "Powód zwrotu",
+    "refundMethod": "Metoda zwrotu",
+    "submit": "Wyślij",
+    "backToHome": "Powrót do strony głównej",
+    "success": "Formularz został wysłany pomyślnie!",
+    "error": "Wystąpił błąd podczas wysyłania formularza"
   }
 }
