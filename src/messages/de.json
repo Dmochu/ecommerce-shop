@@ -253,6 +253,93 @@
     "privacy": "Datenschutz",
     "terms": "Bedingungen"
   },
+  "privacy": {
+    "title": "Datenschutzrichtlinie",
+    "description": "Die Datenschutzrichtlinie definiert die Regeln für die Datenverarbeitung"
+  },
+  "returnForm": {
+    "title": "Rückgabeformular",
+    "subtitle": "Füllen Sie das Formular aus, um eine Produktrückgabeanfrage zu stellen",
+    "orderNumber": "Bestellnummer",
+    "customerName": "Vor- und Nachname",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "address": "Adresse",
+    "city": "Stadt",
+    "postalCode": "Postleitzahl",
+    "country": "Land",
+    "isBusiness": "Firma",
+    "companyName": "Firmenname",
+    "nip": "USt-IdNr.",
+    "reason": "Rückgabegrund",
+    "description": "Beschreibung",
+    "priority": "Priorität",
+    "preferredContactMethod": "Bevorzugte Kontaktmethode",
+    "orderDate": "Bestelldatum",
+    "returnReason": "Rückgabegrund",
+    "refundMethod": "Rückerstattungsmethode",
+    "submit": "Senden",
+    "backToHome": "Zurück zur Startseite",
+    "success": "Formular wurde erfolgreich gesendet!",
+    "error": "Beim Senden des Formulars ist ein Fehler aufgetreten",
+    "form": {
+      "orderNumber": "Bestellnummer",
+      "customerName": "Vor- und Nachname",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "address": "Adresse",
+      "city": "Stadt",
+      "postalCode": "Postleitzahl",
+      "country": "Land"
+    }
+  },
+  "complaintForm": {
+    "title": "Beschwerdeformular",
+    "description": "Füllen Sie das Formular aus, um eine Beschwerde einzureichen",
+    "backToHome": "Zurück zur Startseite",
+    "form": {
+      "orderNumber": "Bestellnummer",
+      "customerName": "Vor- und Nachname",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "complaintType": "Beschwerdetyp",
+      "selectComplaintType": "Wählen Sie den Beschwerdetyp",
+      "types": {
+        "productQuality": "Produktqualität",
+        "deliveryIssue": "Lieferproblem",
+        "customerService": "Kundenservice",
+        "paymentIssue": "Zahlungsproblem",
+        "websiteIssue": "Website-Problem",
+        "other": "Andere"
+      },
+      "description": "Beschreibung",
+      "descriptionPlaceholder": "Beschreiben Sie das Problem im Detail...",
+      "expectedResolution": "Erwartete Lösung",
+      "expectedResolutionPlaceholder": "Welche Lösung erwarten Sie?",
+      "submit": "Senden"
+    },
+    "success": {
+      "title": "Beschwerde wurde gesendet",
+      "message": "Vielen Dank für Ihre Meldung. Wir werden Sie bald kontaktieren.",
+      "backToHome": "Zurück zur Startseite"
+    }
+  },
+  "profile": {
+    "title": "Profil",
+    "edit": "Profil bearbeiten",
+    "save": "Änderungen speichern",
+    "personalInfo": "Persönliche Informationen",
+    "name": "Vor- und Nachname",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "address": "Adresse",
+    "city": "Stadt",
+    "postalCode": "Postleitzahl",
+    "country": "Land",
+    "orders": "Bestellungen",
+    "noOrders": "Keine Bestellungen",
+    "viewOrder": "Bestellung anzeigen"
+  },
   "returns": {
     "title": "Rückgaben",
     "description": "Informationen zu Produktrückgaben",

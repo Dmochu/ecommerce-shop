@@ -367,7 +367,17 @@
     "submit": "Wyślij",
     "backToHome": "Powrót do strony głównej",
     "success": "Formularz został wysłany pomyślnie!",
-    "error": "Wystąpił błąd podczas wysyłania formularza"
+    "error": "Wystąpił błąd podczas wysyłania formularza",
+    "form": {
+      "orderNumber": "Numer zamówienia",
+      "customerName": "Imię i nazwisko",
+      "email": "Email",
+      "phone": "Telefon",
+      "address": "Adres",
+      "city": "Miasto",
+      "postalCode": "Kod pocztowy",
+      "country": "Kraj"
+    }
   },
   "complaintForm": {
     "title": "Formularz reklamacji",
