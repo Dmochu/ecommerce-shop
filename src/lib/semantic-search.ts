@@ -296,8 +296,7 @@ export class SemanticSearchEngine {
       const similarProducts = await prisma.product.findMany({
         where: {
           categoryId: product.categoryId,
-          id: { not: productId },
-          isActive: true
+          id: { not: productId }
         },
         include: {
           category: true,
