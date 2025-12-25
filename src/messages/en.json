@@ -255,7 +255,48 @@
   },
   "terms": {
     "title": "Terms and Conditions",
-    "description": "Terms and conditions for using the store"
+    "description": "Terms and conditions for using the store",
+    "section1": {
+      "title": "1. General Provisions",
+      "content": "These terms and conditions define the rules for using the online store. By using the store, you accept the provisions of these terms and conditions. The store reserves the right to change the terms and conditions at any time."
+    },
+    "section2": {
+      "title": "2. Definitions",
+      "content": "Store - means the online store available at www. Seller - means the entity operating the store. Customer - means a natural person, legal person or organizational unit without legal personality that uses the store."
+    },
+    "section3": {
+      "title": "3. Conclusion of Contract",
+      "content": "The sales contract is concluded at the moment the Customer places an order and the Seller confirms acceptance of the order. The Seller confirms acceptance of the order by sending an email to the address provided by the Customer."
+    },
+    "section4": {
+      "title": "4. Prices and Payments",
+      "content": "All product prices given in the store are gross prices and are expressed in Polish zlotys (PLN). Prices do not include delivery costs, which are given separately. Payment can be made by bank transfer, payment card or on delivery."
+    },
+    "section5": {
+      "title": "5. Delivery",
+      "content": "Product delivery takes place in Poland and selected countries. Delivery costs are given when placing an order. Order processing time is from 2 to 5 business days, depending on the selected delivery method."
+    },
+    "section6": {
+      "title": "6. Right to Withdraw from Contract",
+      "content": "The Customer has the right to withdraw from the contract within 14 days from the date of receiving the product, without giving a reason. To exercise the right of withdrawal, the Customer should inform the Seller of their decision."
+    },
+    "section7": {
+      "title": "7. Complaints",
+      "content": "The Customer has the right to file a complaint in case of a product defect. The complaint should be submitted in writing or electronically within 2 years from the date of product delivery."
+    },
+    "section8": {
+      "title": "8. Personal Data Protection",
+      "content": "Detailed information regarding the processing of personal data can be found in the Privacy Policy available on the store's website."
+    },
+    "section9": {
+      "title": "9. Intellectual Property",
+      "content": "All content posted in the store, including texts, graphics, logos, are protected by copyright and are the property of the Seller or its partners."
+    },
+    "section10": {
+      "title": "10. Final Provisions",
+      "content": "In matters not regulated in these terms and conditions, Polish law applies, in particular the Civil Code and the Consumer Rights Act."
+    },
+    "lastUpdated": "Last updated"
   },
   "returns": {
     "title": "Returns",
@@ -327,7 +368,48 @@
   },
   "privacy": {
     "title": "Privacy Policy",
-    "description": "Privacy policy defines data processing rules"
+    "description": "Privacy policy defines data processing rules",
+    "section1": {
+      "title": "1. Data Administrator",
+      "content": "The administrator of personal data is the owner of the online store. Contact with the administrator is possible through the contact form available on the store's website or at the email address provided in the contact section."
+    },
+    "section2": {
+      "title": "2. Scope of Collected Data",
+      "content": "The store collects the following personal data: name and surname, email address, phone number, delivery address, order data and shopping preferences. Some data may be collected automatically when using the store."
+    },
+    "section3": {
+      "title": "3. Purpose of Data Processing",
+      "content": "Personal data is processed for the purpose of order fulfillment, customer service, direct marketing (with consent), statistical analysis and ensuring transaction security."
+    },
+    "section4": {
+      "title": "4. Legal Basis for Processing",
+      "content": "Personal data processing takes place on the basis of: user consent, contract performance, legal obligation and the administrator's legitimate interest."
+    },
+    "section5": {
+      "title": "5. Data Retention Period",
+      "content": "Personal data is stored for the period necessary to achieve the purposes for which it was collected, or for the period required by law, in particular tax regulations."
+    },
+    "section6": {
+      "title": "6. User Rights",
+      "content": "The user has the right to: access their data, correct data, delete data, limit processing, transfer data and object to processing."
+    },
+    "section7": {
+      "title": "7. Data Sharing",
+      "content": "Personal data may be shared with third parties only to the extent necessary for order fulfillment, such as courier companies, payment service providers and entities providing IT services."
+    },
+    "section8": {
+      "title": "8. Cookies",
+      "content": "The store uses cookies to ensure proper website operation, traffic analysis and content personalization. The user can manage cookie settings in the browser."
+    },
+    "section9": {
+      "title": "9. Data Security",
+      "content": "The store applies appropriate technical and organizational measures ensuring protection of personal data against unauthorized access, loss, destruction or modification."
+    },
+    "section10": {
+      "title": "10. Changes to Privacy Policy",
+      "content": "The administrator reserves the right to make changes to the privacy policy. Users will be informed of any changes through a message on the store's website or email."
+    },
+    "lastUpdated": "Last updated"
   },
   "paymentMethods": {
     "title": "Payment Methods",
