@@ -473,6 +473,47 @@
   },
   "privacy": {
     "title": "Zásady ochrany osobních údajů",
-    "description": "Zásady ochrany osobních údajů definují pravidla zpracování dat"
+    "description": "Zásady ochrany osobních údajů definují pravidla zpracování dat",
+    "section1": {
+      "title": "1. Správce údajů",
+      "content": "Správcem osobních údajů je vlastník internetového obchodu. Kontakt se správcem je možný prostřednictvím kontaktního formuláře dostupného na stránkách obchodu nebo na e-mailové adrese uvedené v sekci kontakt."
+    },
+    "section2": {
+      "title": "2. Rozsah shromažďovaných údajů",
+      "content": "Obchod shromažďuje následující osobní údaje: jméno a příjmení, e-mailová adresa, telefonní číslo, dodací adresa, údaje o objednávkách a nákupní preference. Některé údaje mohou být shromažďovány automaticky při používání obchodu."
+    },
+    "section3": {
+      "title": "3. Účel zpracování údajů",
+      "content": "Osobní údaje jsou zpracovávány za účelem realizace objednávek, zákaznického servisu, přímého marketingu (se souhlasem), statistické analýzy a zajištění bezpečnosti transakcí."
+    },
+    "section4": {
+      "title": "4. Právní základ zpracování",
+      "content": "Zpracování osobních údajů probíhá na základě: souhlasu uživatele, plnění smlouvy, právní povinnosti a oprávněného zájmu správce."
+    },
+    "section5": {
+      "title": "5. Doba uchovávání údajů",
+      "content": "Osobní údaje jsou uchovávány po dobu nezbytnou k dosažení účelů, pro které byly shromážděny, nebo po dobu požadovanou právními předpisy, zejména daňovými předpisy."
+    },
+    "section6": {
+      "title": "6. Práva uživatele",
+      "content": "Uživatel má právo na: přístup ke svým údajům, opravu údajů, smazání údajů, omezení zpracování, přenos údajů a vznesení námitky proti zpracování."
+    },
+    "section7": {
+      "title": "7. Sdílení údajů",
+      "content": "Osobní údaje mohou být sdíleny s třetími stranami pouze v rozsahu nezbytném pro realizaci objednávek, jako jsou kurýrní společnosti, poskytovatelé platebních služeb a subjekty poskytující IT služby."
+    },
+    "section8": {
+      "title": "8. Soubory cookies",
+      "content": "Obchod používá soubory cookies za účelem zajištění správného fungování stránky, analýzy provozu a personalizace obsahu. Uživatel může spravovat nastavení cookies v prohlížeči."
+    },
+    "section9": {
+      "title": "9. Zabezpečení údajů",
+      "content": "Obchod používá odpovídající technická a organizační opatření zajišťující ochranu osobních údajů před neoprávněným přístupem, ztrátou, zničením nebo úpravou."
+    },
+    "section10": {
+      "title": "10. Změny v zásadách ochrany osobních údajů",
+      "content": "Správce si vyhrazuje právo provádět změny v zásadách ochrany osobních údajů. O všech změnách budou uživatelé informováni prostřednictvím zprávy na stránkách obchodu nebo e-mailové zprávy."
+    },
+    "lastUpdated": "Poslední aktualizace"
   }
 }
