@@ -263,7 +263,7 @@ export default function LoyaltyDashboard() {
             {/* Referral Program */}
             <ReferralProgram 
               userId={userId}
-              referralCode={`REF${userId?.slice(-6)}`}
+              referralCode={userId ? `REF${userId.slice(-6)}` : 'REF000000'}
               referrerReward={100}
               refereeReward={50}
             />
