@@ -389,6 +389,9 @@
         "other": "Inne"
       },
       "description": "Opis",
+      "descriptionPlaceholder": "Opisz szczegółowo problem...",
+      "expectedResolution": "Oczekiwane rozwiązanie",
+      "expectedResolutionPlaceholder": "Jakiego rozwiązania oczekujesz?",
       "submit": "Wyślij"
     },
     "success": {
@@ -429,6 +432,48 @@
       "verification": {
         "title": "Weryfikacja",
         "content": "Weryfikacja transakcji"
+      },
+      "encryption": {
+        "title": "Szyfrowanie danych",
+        "content": "Twoje dane są bezpieczne"
+      }
+    },
+    "process": {
+      "title": "Proces płatności",
+      "step1": {
+        "title": "Wybierz metodę",
+        "content": "Wybierz preferowaną metodę płatności"
+      },
+      "step2": {
+        "title": "Wprowadź dane",
+        "content": "Wprowadź wymagane dane płatności"
+      },
+      "step3": {
+        "title": "Potwierdź",
+        "content": "Potwierdź transakcję"
+      },
+      "step4": {
+        "title": "Gotowe",
+        "content": "Otrzymasz potwierdzenie płatności"
+      }
+    },
+    "faq": {
+      "title": "Najczęściej zadawane pytania",
+      "question1": {
+        "title": "Jakie metody płatności akceptujecie?",
+        "answer": "Akceptujemy karty kredytowe, przelewy bankowe i płatności mobilne."
+      },
+      "question2": {
+        "title": "Czy płatności są bezpieczne?",
+        "answer": "Tak, wszystkie transakcje są szyfrowane i bezpieczne."
+      },
+      "question3": {
+        "title": "Kiedy otrzymam zwrot?",
+        "answer": "Zwrot środków następuje w ciągu 14 dni roboczych."
+      },
+      "question4": {
+        "title": "Czy mogę anulować płatność?",
+        "answer": "Tak, możesz anulować płatność przed finalizacją zamówienia."
       }
     }
   },
@@ -451,6 +496,69 @@
   "returns": {
     "title": "Zwroty",
     "description": "Informacje o zwrotach produktów",
-    "backToHome": "Powrót do strony głównej"
+    "backToHome": "Powrót do strony głównej",
+    "quickActions": {
+      "returnForm": {
+        "title": "Formularz zwrotu",
+        "description": "Złóż wniosek o zwrot produktu"
+      },
+      "complaintForm": {
+        "title": "Formularz reklamacji",
+        "description": "Złóż reklamację produktu"
+      }
+    },
+    "returnPolicy": {
+      "title": "Polityka zwrotów",
+      "timeframe": {
+        "title": "Termin zwrotu",
+        "content": "14 dni na zwrot produktu"
+      },
+      "conditions": {
+        "title": "Warunki zwrotu",
+        "content": "Produkt musi być w oryginalnym stanie"
+      },
+      "shipping": {
+        "title": "Koszty dostawy",
+        "content": "Zwrot na koszt klienta"
+      },
+      "details": {
+        "title": "Szczegóły",
+        "item1": "Produkt musi być nieużywany",
+        "item2": "Oryginalne opakowanie wymagane",
+        "item3": "Dokumenty zakupu muszą być dołączone",
+        "item4": "Zwrot w ciągu 14 dni od otrzymania",
+        "item5": "Zwrot środków w ciągu 14 dni roboczych"
+      }
+    },
+    "complaintProcess": {
+      "title": "Proces reklamacji",
+      "step1": {
+        "title": "Złóż reklamację",
+        "content": "Wypełnij formularz reklamacji online"
+      },
+      "step2": {
+        "title": "Weryfikacja",
+        "content": "Sprawdzimy Twoją reklamację"
+      },
+      "step3": {
+        "title": "Rozpatrzenie",
+        "content": "Rozpatrzymy reklamację w ciągu 7 dni"
+      },
+      "step4": {
+        "title": "Rozwiązanie",
+        "content": "Otrzymasz odpowiedź i rozwiązanie"
+      }
+    },
+    "contact": {
+      "title": "Kontakt",
+      "email": {
+        "title": "Email",
+        "content": "Skontaktuj się z nami przez email"
+      },
+      "phone": {
+        "title": "Telefon",
+        "content": "Zadzwoń do nas"
+      }
+    }
   }
 }

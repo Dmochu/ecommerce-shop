@@ -256,6 +256,146 @@
   "returns": {
     "title": "Rückgaben",
     "description": "Informationen zu Produktrückgaben",
-    "backToHome": "Zurück zur Startseite"
+    "backToHome": "Zurück zur Startseite",
+    "quickActions": {
+      "returnForm": {
+        "title": "Rückgabeformular",
+        "description": "Rückgabeanfrage stellen"
+      },
+      "complaintForm": {
+        "title": "Beschwerdeformular",
+        "description": "Produktbeschwerde einreichen"
+      }
+    },
+    "returnPolicy": {
+      "title": "Rückgaberichtlinie",
+      "timeframe": {
+        "title": "Rückgabefrist",
+        "content": "14 Tage für Produktrückgabe"
+      },
+      "conditions": {
+        "title": "Rückgabebedingungen",
+        "content": "Produkt muss im Originalzustand sein"
+      },
+      "shipping": {
+        "title": "Versandkosten",
+        "content": "Rückgabe auf Kosten des Kunden"
+      },
+      "details": {
+        "title": "Details",
+        "item1": "Produkt muss unbenutzt sein",
+        "item2": "Originalverpackung erforderlich",
+        "item3": "Kaufbelege müssen beigefügt sein",
+        "item4": "Rückgabe innerhalb von 14 Tagen nach Erhalt",
+        "item5": "Rückerstattung innerhalb von 14 Werktagen"
+      }
+    },
+    "complaintProcess": {
+      "title": "Beschwerdeprozess",
+      "step1": {
+        "title": "Beschwerde einreichen",
+        "content": "Beschwerdeformular online ausfüllen"
+      },
+      "step2": {
+        "title": "Überprüfung",
+        "content": "Wir prüfen Ihre Beschwerde"
+      },
+      "step3": {
+        "title": "Bearbeitung",
+        "content": "Wir bearbeiten Ihre Beschwerde innerhalb von 7 Tagen"
+      },
+      "step4": {
+        "title": "Lösung",
+        "content": "Sie erhalten eine Antwort und Lösung"
+      }
+    },
+    "contact": {
+      "title": "Kontakt",
+      "email": {
+        "title": "E-Mail",
+        "content": "Kontaktieren Sie uns per E-Mail"
+      },
+      "phone": {
+        "title": "Telefon",
+        "content": "Rufen Sie uns an"
+      }
+    }
+  },
+  "paymentMethods": {
+    "title": "Zahlungsmethoden",
+    "description": "Informationen zu verfügbaren Zahlungsmethoden",
+    "backToHome": "Zurück zur Startseite",
+    "methods": {
+      "title": "Verfügbare Zahlungsmethoden",
+      "creditCards": {
+        "title": "Kreditkarten",
+        "description": "Wir akzeptieren alle gängigen Kreditkarten"
+      },
+      "mobilePayments": {
+        "title": "Mobile Zahlungen",
+        "description": "Zahlungen per Telefon"
+      },
+      "bankTransfer": {
+        "title": "Banküberweisung",
+        "description": "Traditionelle Banküberweisung"
+      },
+      "cashOnDelivery": {
+        "title": "Zahlung bei Lieferung",
+        "description": "Bei Lieferung zahlen"
+      }
+    },
+    "security": {
+      "title": "Sicherheit",
+      "ssl": {
+        "title": "SSL-Verschlüsselung",
+        "content": "Alle Transaktionen sind verschlüsselt"
+      },
+      "verification": {
+        "title": "Überprüfung",
+        "content": "Transaktionsüberprüfung"
+      },
+      "encryption": {
+        "title": "Datenverschlüsselung",
+        "content": "Ihre Daten sind sicher"
+      }
+    },
+    "process": {
+      "title": "Zahlungsprozess",
+      "step1": {
+        "title": "Methode wählen",
+        "content": "Wählen Sie Ihre bevorzugte Zahlungsmethode"
+      },
+      "step2": {
+        "title": "Daten eingeben",
+        "content": "Geben Sie die erforderlichen Zahlungsdaten ein"
+      },
+      "step3": {
+        "title": "Bestätigen",
+        "content": "Bestätigen Sie die Transaktion"
+      },
+      "step4": {
+        "title": "Fertig",
+        "content": "Sie erhalten eine Zahlungsbestätigung"
+      }
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "question1": {
+        "title": "Welche Zahlungsmethoden akzeptieren Sie?",
+        "answer": "Wir akzeptieren Kreditkarten, Banküberweisungen und mobile Zahlungen."
+      },
+      "question2": {
+        "title": "Sind Zahlungen sicher?",
+        "answer": "Ja, alle Transaktionen sind verschlüsselt und sicher."
+      },
+      "question3": {
+        "title": "Wann erhalte ich eine Rückerstattung?",
+        "answer": "Rückerstattungen werden innerhalb von 14 Werktagen bearbeitet."
+      },
+      "question4": {
+        "title": "Kann ich eine Zahlung stornieren?",
+        "answer": "Ja, Sie können die Zahlung vor der Bestätigung der Bestellung stornieren."
+      }
+    }
   }
 }

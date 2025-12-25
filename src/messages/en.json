@@ -260,6 +260,150 @@
   "returns": {
     "title": "Returns",
     "description": "Information about product returns",
-    "backToHome": "Back to home"
+    "backToHome": "Back to home",
+    "quickActions": {
+      "returnForm": {
+        "title": "Return Form",
+        "description": "Submit a product return request"
+      },
+      "complaintForm": {
+        "title": "Complaint Form",
+        "description": "Submit a product complaint"
+      }
+    },
+    "returnPolicy": {
+      "title": "Return Policy",
+      "timeframe": {
+        "title": "Return Period",
+        "content": "14 days to return the product"
+      },
+      "conditions": {
+        "title": "Return Conditions",
+        "content": "Product must be in original condition"
+      },
+      "shipping": {
+        "title": "Shipping Costs",
+        "content": "Return at customer's expense"
+      },
+      "details": {
+        "title": "Details",
+        "item1": "Product must be unused",
+        "item2": "Original packaging required",
+        "item3": "Purchase documents must be included",
+        "item4": "Return within 14 days of receipt",
+        "item5": "Refund within 14 business days"
+      }
+    },
+    "complaintProcess": {
+      "title": "Complaint Process",
+      "step1": {
+        "title": "Submit Complaint",
+        "content": "Fill out the online complaint form"
+      },
+      "step2": {
+        "title": "Verification",
+        "content": "We will review your complaint"
+      },
+      "step3": {
+        "title": "Processing",
+        "content": "We will process your complaint within 7 days"
+      },
+      "step4": {
+        "title": "Resolution",
+        "content": "You will receive a response and solution"
+      }
+    },
+    "contact": {
+      "title": "Contact",
+      "email": {
+        "title": "Email",
+        "content": "Contact us by email"
+      },
+      "phone": {
+        "title": "Phone",
+        "content": "Call us"
+      }
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "description": "Privacy policy defines data processing rules"
+  },
+  "paymentMethods": {
+    "title": "Payment Methods",
+    "description": "Information about available payment methods",
+    "backToHome": "Back to home",
+    "methods": {
+      "title": "Available Payment Methods",
+      "creditCards": {
+        "title": "Credit Cards",
+        "description": "We accept all major credit cards"
+      },
+      "mobilePayments": {
+        "title": "Mobile Payments",
+        "description": "Payments via phone"
+      },
+      "bankTransfer": {
+        "title": "Bank Transfer",
+        "description": "Traditional bank transfer"
+      },
+      "cashOnDelivery": {
+        "title": "Cash on Delivery",
+        "description": "Pay on delivery"
+      }
+    },
+    "security": {
+      "title": "Security",
+      "ssl": {
+        "title": "SSL Encryption",
+        "content": "All transactions are encrypted"
+      },
+      "verification": {
+        "title": "Verification",
+        "content": "Transaction verification"
+      },
+      "encryption": {
+        "title": "Data Encryption",
+        "content": "Your data is secure"
+      }
+    },
+    "process": {
+      "title": "Payment Process",
+      "step1": {
+        "title": "Choose Method",
+        "content": "Select your preferred payment method"
+      },
+      "step2": {
+        "title": "Enter Data",
+        "content": "Enter required payment data"
+      },
+      "step3": {
+        "title": "Confirm",
+        "content": "Confirm the transaction"
+      },
+      "step4": {
+        "title": "Done",
+        "content": "You will receive payment confirmation"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "question1": {
+        "title": "What payment methods do you accept?",
+        "answer": "We accept credit cards, bank transfers and mobile payments."
+      },
+      "question2": {
+        "title": "Are payments secure?",
+        "answer": "Yes, all transactions are encrypted and secure."
+      },
+      "question3": {
+        "title": "When will I receive a refund?",
+        "answer": "Refunds are processed within 14 business days."
+      },
+      "question4": {
+        "title": "Can I cancel a payment?",
+        "answer": "Yes, you can cancel payment before finalizing the order."
+      }
+    }
   }
 }

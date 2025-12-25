@@ -1,0 +1,782 @@
+
+> ecommerce-shop@0.1.0 build
+> npx prisma generate && next build
+
+Prisma schema loaded from prisma/schema.prisma
+
+✔ Generated Prisma Client (v6.14.0) to ./node_modules/@prisma/client in 174ms
+
+Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+
+Tip: Interested in query caching in just a few lines of code? Try Accelerate today! https://pris.ly/tip-3-accelerate
+
+ ⚠ Warning: Found multiple lockfiles. Selecting /Users/dmochu/package-lock.json.
+   Consider removing the lockfiles at:
+   * /Users/dmochu/ecommercetulinki/ecommerce-shop-1/package-lock.json
+
+   ▲ Next.js 15.4.6
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 3.0s
+   Skipping linting
+   Checking validity of types ...
+   Collecting page data ...
+Apaczka API credentials not configured
+Apaczka API credentials not configured
+Apaczka API credentials not configured
+Apaczka API credentials not configured
+   Generating static pages (0/135) ...
+Layout - Locale: pl
+Layout - Messages keys: [
+  'common',        'navigation',
+  'header',        'home',
+  'products',      'stock',
+  'categories',    'about',
+  'cart',          'auth',
+  'admin',         'filters',
+  'footer',        'terms',
+  'privacy',       'returnForm',
+  'complaintForm', 'paymentMethods',
+  'profile',       'returns'
+]
+Error: MISSING_MESSAGE: returns.quickActions.returnForm.title (en)
+    at k (.next/server/chunks/8337.js:1:42434)
+    at l (.next/server/chunks/8337.js:1:42598)
+    at m (.next/server/chunks/8337.js:1:43749)
+    at n (.next/server/app/[locale]/returns/page.js:2:11638) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'returns.quickActions.returnForm.title (en)'
+}
+Error: MISSING_MESSAGE: returns.quickActions.returnForm.description (en)
+    at k (.next/server/chunks/8337.js:1:42434)
+    at l (.next/server/chunks/8337.js:1:42598)
+    at m (.next/server/chunks/8337.js:1:43749)
+    at n (.next/server/app/[locale]/returns/page.js:2:11729) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'returns.quickActions.returnForm.description (en)'
+}
+Error: MISSING_MESSAGE: returns.quickActions.complaintForm.title (en)
+    at k (.next/server/chunks/8337.js:1:42434)
+    at l (.next/server/chunks/8337.js:1:42598)
+    at m (.next/server/chunks/8337.js:1:43749)
+    at n (.next/server/app/[locale]/returns/page.js:2:12142) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'returns.quickActions.complaintForm.title (en)'
+}
+Error: MISSING_MESSAGE: returns.quickActions.complaintForm.description (en)
+    at k (.next/server/chunks/8337.js:1:42434)
+    at l (.next/server/chunks/8337.js:1:42598)
+    at m (.next/server/chunks/8337.js:1:43749)
+    at n (.next/server/app/[locale]/returns/page.js:2:12236) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'returns.quickActions.complaintForm.description (en)'
+}
+Error: MISSING_MESSAGE: returns.returnPolicy.title (en)
+    at k (.next/server/chunks/8337.js:1:42434)
+    at l (.next/server/chunks/8337.js:1:42598)
+    at m (.next/server/chunks/8337.js:1:43749)
+    at n (.next/server/app/[locale]/returns/page.js:2:12425) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'returns.returnPolicy.title (en)'
+}
+Error: MISSING_MESSAGE: returns.returnPolicy.timeframe.title (en)
+    at k (.next/server/chunks/8337.js:1:42434)
+    at l (.next/server/chunks/8337.js:1:42598)
+    at m (.next/server/chunks/8337.js:1:43749)
+    at n (.next/server/app/[locale]/returns/page.js:2:12774) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'returns.returnPolicy.timeframe.title (en)'
+}
+Error: MISSING_MESSAGE: returns.returnPolicy.timeframe.content (en)
+    at k (.next/server/chunks/8337.js:1:42434)
+    at l (.next/server/chunks/8337.js:1:42598)
+    at m (.next/server/chunks/8337.js:1:43749)
+    at n (.next/server/app/[locale]/returns/page.js:2:12864) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'returns.returnPolicy.timeframe.content (en)'
+}
+Error: MISSING_MESSAGE: returns.returnPolicy.conditions.title (en)
+    at k (.next/server/chunks/8337.js:1:42434)
+    at l (.next/server/chunks/8337.js:1:42598)
+    at m (.next/server/chunks/8337.js:1:43749)
+    at n (.next/server/app/[locale]/returns/page.js:2:13145) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'returns.returnPolicy.conditions.title (en)'
+}
+Error: MISSING_MESSAGE: returns.returnPolicy.conditions.content (en)
+    at k (.next/server/chunks/8337.js:1:42434)
+    at l (.next/server/chunks/8337.js:1:42598)
+    at m (.next/server/chunks/8337.js:1:43749)
+    at n (.next/server/app/[locale]/returns/page.js:2:13236) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'returns.returnPolicy.conditions.content (en)'
+}
+Error: MISSING_MESSAGE: returns.returnPolicy.shipping.title (en)
+    at k (.next/server/chunks/8337.js:1:42434)
+    at l (.next/server/chunks/8337.js:1:42598)
+    at m (.next/server/chunks/8337.js:1:43749)
+    at n (.next/server/app/[locale]/returns/page.js:2:13518) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'returns.returnPolicy.shipping.title (en)'
+}
+Error: MISSING_MESSAGE: returns.returnPolicy.shipping.content (en)
+    at k (.next/server/chunks/8337.js:1:42434)
+    at l (.next/server/chunks/8337.js:1:42598)
+    at m (.next/server/chunks/8337.js:1:43749)
+    at n (.next/server/app/[locale]/returns/page.js:2:13607) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'returns.returnPolicy.shipping.content (en)'
+}
+Error: MISSING_MESSAGE: returns.returnPolicy.details.title (en)
+    at k (.next/server/chunks/8337.js:1:42434)
+    at l (.next/server/chunks/8337.js:1:42598)
+    at m (.next/server/chunks/8337.js:1:43749)
+    at n (.next/server/app/[locale]/returns/page.js:2:13802) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'returns.returnPolicy.details.title (en)'
+}
+Error: MISSING_MESSAGE: returns.returnPolicy.details.item1 (en)
+    at k (.next/server/chunks/8337.js:1:42434)
+    at l (.next/server/chunks/8337.js:1:42598)
+    at m (.next/server/chunks/8337.js:1:43749)
+    at n (.next/server/app/[locale]/returns/page.js:2:13950) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'returns.returnPolicy.details.item1 (en)'
+}
+Error: MISSING_MESSAGE: returns.returnPolicy.details.item2 (en)
+    at k (.next/server/chunks/8337.js:1:42434)
+    at l (.next/server/chunks/8337.js:1:42598)
+    at m (.next/server/chunks/8337.js:1:43749)
+    at n (.next/server/app/[locale]/returns/page.js:2:14009) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'returns.returnPolicy.details.item2 (en)'
+}
+Error: MISSING_MESSAGE: returns.returnPolicy.details.item3 (en)
+    at k (.next/server/chunks/8337.js:1:42434)
+    at l (.next/server/chunks/8337.js:1:42598)
+    at m (.next/server/chunks/8337.js:1:43749)
+    at n (.next/server/app/[locale]/returns/page.js:2:14068) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'returns.returnPolicy.details.item3 (en)'
+}
+Error: MISSING_MESSAGE: returns.returnPolicy.details.item4 (en)
+    at k (.next/server/chunks/8337.js:1:42434)
+    at l (.next/server/chunks/8337.js:1:42598)
+    at m (.next/server/chunks/8337.js:1:43749)
+    at n (.next/server/app/[locale]/returns/page.js:2:14127) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'returns.returnPolicy.details.item4 (en)'
+}
+Error: MISSING_MESSAGE: returns.returnPolicy.details.item5 (en)
+    at k (.next/server/chunks/8337.js:1:42434)
+    at l (.next/server/chunks/8337.js:1:42598)
+    at m (.next/server/chunks/8337.js:1:43749)
+    at n (.next/server/app/[locale]/returns/page.js:2:14186) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'returns.returnPolicy.details.item5 (en)'
+}
+Error: MISSING_MESSAGE: returns.complaintProcess.title (en)
+    at k (.next/server/chunks/8337.js:1:42434)
+    at l (.next/server/chunks/8337.js:1:42598)
+    at m (.next/server/chunks/8337.js:1:43749)
+    at n (.next/server/app/[locale]/returns/page.js:2:14366) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'returns.complaintProcess.title (en)'
+}
+Error: MISSING_MESSAGE: returns.complaintProcess.step1.title (en)
+    at k (.next/server/chunks/8337.js:1:42434)
+    at l (.next/server/chunks/8337.js:1:42598)
+    at m (.next/server/chunks/8337.js:1:43749)
+    at n (.next/server/app/[locale]/returns/page.js:2:14780) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'returns.complaintProcess.step1.title (en)'
+}
+Error: MISSING_MESSAGE: returns.complaintProcess.step1.content (en)
+    at k (.next/server/chunks/8337.js:1:42434)
+    at l (.next/server/chunks/8337.js:1:42598)
+    at m (.next/server/chunks/8337.js:1:43749)
+    at n (.next/server/app/[locale]/returns/page.js:2:14870) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'returns.complaintProcess.step1.content (en)'
+}
+Error: MISSING_MESSAGE: returns.complaintProcess.step2.title (en)
+    at k (.next/server/chunks/8337.js:1:42434)
+    at l (.next/server/chunks/8337.js:1:42598)
+    at m (.next/server/chunks/8337.js:1:43749)
+    at n (.next/server/app/[locale]/returns/page.js:2:15248) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'returns.complaintProcess.step2.title (en)'
+}
+Error: MISSING_MESSAGE: returns.complaintProcess.step2.content (en)
+    at k (.next/server/chunks/8337.js:1:42434)
+    at l (.next/server/chunks/8337.js:1:42598)
+    at m (.next/server/chunks/8337.js:1:43749)
+    at n (.next/server/app/[locale]/returns/page.js:2:15338) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'returns.complaintProcess.step2.content (en)'
+}
+ ⚠ Unsupported metadata viewport is configured in metadata export in /[locale]/track-order. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata viewport is configured in metadata export in /admin/categories/new. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+Apaczka API credentials not configured
+Error: MISSING_MESSAGE: paymentMethods (de)
+    at <unknown> (.next/server/chunks/8337.js:1:42158)
+    at aB (.next/server/chunks/8337.js:1:42210)
+    at <unknown> (.next/server/app/[locale]/payment-methods/page.js:2:9762)
+    at <unknown> (.next/server/app/[locale]/payment-methods/page.js:2:9794)
+    at <unknown> (.next/server/app/[locale]/payment-methods/page.js:2:9901)
+    at <unknown> (.next/server/app/[locale]/payment-methods/page.js:2:10023)
+    at async p (.next/server/app/[locale]/payment-methods/page.js:2:11070) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'paymentMethods (de)'
+}
+ ⚠ Unsupported metadata viewport is configured in metadata export in /[locale]/payment-methods. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+Error: MISSING_MESSAGE: paymentMethods.security.encryption.title (cs)
+    at k (.next/server/chunks/8337.js:1:42434)
+    at l (.next/server/chunks/8337.js:1:42598)
+    at m (.next/server/chunks/8337.js:1:43749)
+    at p (.next/server/app/[locale]/payment-methods/page.js:2:16391) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'paymentMethods.security.encryption.title (cs)'
+}
+Error: MISSING_MESSAGE: paymentMethods.security.encryption.content (cs)
+    at k (.next/server/chunks/8337.js:1:42434)
+    at l (.next/server/chunks/8337.js:1:42598)
+    at m (.next/server/chunks/8337.js:1:43749)
+    at p (.next/server/app/[locale]/payment-methods/page.js:2:16478) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'paymentMethods.security.encryption.content (cs)'
+}
+Error: MISSING_MESSAGE: paymentMethods.process.title (cs)
+    at k (.next/server/chunks/8337.js:1:42434)
+    at l (.next/server/chunks/8337.js:1:42598)
+    at m (.next/server/chunks/8337.js:1:43749)
+    at p (.next/server/app/[locale]/payment-methods/page.js:2:16659) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'paymentMethods.process.title (cs)'
+}
+Error: MISSING_MESSAGE: paymentMethods.process.step1.title (cs)
+    at k (.next/server/chunks/8337.js:1:42434)
+    at l (.next/server/chunks/8337.js:1:42598)
+    at m (.next/server/chunks/8337.js:1:43749)
+    at p (.next/server/app/[locale]/payment-methods/page.js:2:17064) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'paymentMethods.process.step1.title (cs)'
+}
+Error: MISSING_MESSAGE: paymentMethods.process.step1.content (cs)
+    at k (.next/server/chunks/8337.js:1:42434)
+    at l (.next/server/chunks/8337.js:1:42598)
+    at m (.next/server/chunks/8337.js:1:43749)
+    at p (.next/server/app/[locale]/payment-methods/page.js:2:17145) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'paymentMethods.process.step1.content (cs)'
+}
+Error: MISSING_MESSAGE: paymentMethods.process.step2.title (cs)
+    at k (.next/server/chunks/8337.js:1:42434)
+    at l (.next/server/chunks/8337.js:1:42598)
+    at m (.next/server/chunks/8337.js:1:43749)
+    at p (.next/server/app/[locale]/payment-methods/page.js:2:17514) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'paymentMethods.process.step2.title (cs)'
+}
+Error: MISSING_MESSAGE: paymentMethods.process.step2.content (cs)
+    at k (.next/server/chunks/8337.js:1:42434)
+    at l (.next/server/chunks/8337.js:1:42598)
+    at m (.next/server/chunks/8337.js:1:43749)
+    at p (.next/server/app/[locale]/payment-methods/page.js:2:17595) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'paymentMethods.process.step2.content (cs)'
+}
+Error: MISSING_MESSAGE: paymentMethods.process.step3.title (cs)
+    at k (.next/server/chunks/8337.js:1:42434)
+    at l (.next/server/chunks/8337.js:1:42598)
+    at m (.next/server/chunks/8337.js:1:43749)
+    at p (.next/server/app/[locale]/payment-methods/page.js:2:17964) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'paymentMethods.process.step3.title (cs)'
+}
+Error: MISSING_MESSAGE: paymentMethods.process.step3.content (cs)
+    at k (.next/server/chunks/8337.js:1:42434)
+    at l (.next/server/chunks/8337.js:1:42598)
+    at m (.next/server/chunks/8337.js:1:43749)
+    at p (.next/server/app/[locale]/payment-methods/page.js:2:18045) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'paymentMethods.process.step3.content (cs)'
+}
+Error: MISSING_MESSAGE: paymentMethods.process.step4.title (cs)
+    at k (.next/server/chunks/8337.js:1:42434)
+    at l (.next/server/chunks/8337.js:1:42598)
+    at m (.next/server/chunks/8337.js:1:43749)
+    at p (.next/server/app/[locale]/payment-methods/page.js:2:18414) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'paymentMethods.process.step4.title (cs)'
+}
+Error: MISSING_MESSAGE: paymentMethods.process.step4.content (cs)
+    at k (.next/server/chunks/8337.js:1:42434)
+    at l (.next/server/chunks/8337.js:1:42598)
+    at m (.next/server/chunks/8337.js:1:43749)
+    at p (.next/server/app/[locale]/payment-methods/page.js:2:18495) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'paymentMethods.process.step4.content (cs)'
+}
+Error: MISSING_MESSAGE: paymentMethods.faq.title (cs)
+    at k (.next/server/chunks/8337.js:1:42434)
+    at l (.next/server/chunks/8337.js:1:42598)
+    at m (.next/server/chunks/8337.js:1:43749)
+    at p (.next/server/app/[locale]/payment-methods/page.js:2:18699) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'paymentMethods.faq.title (cs)'
+}
+Error: MISSING_MESSAGE: paymentMethods.faq.question1.title (cs)
+    at k (.next/server/chunks/8337.js:1:42434)
+    at l (.next/server/chunks/8337.js:1:42598)
+    at m (.next/server/chunks/8337.js:1:43749)
+    at p (.next/server/app/[locale]/payment-methods/page.js:2:18876) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'paymentMethods.faq.question1.title (cs)'
+}
+Error: MISSING_MESSAGE: paymentMethods.faq.question1.answer (cs)
+    at k (.next/server/chunks/8337.js:1:42434)
+    at l (.next/server/chunks/8337.js:1:42598)
+    at m (.next/server/chunks/8337.js:1:43749)
+    at p (.next/server/app/[locale]/payment-methods/page.js:2:18957) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'paymentMethods.faq.question1.answer (cs)'
+}
+Error: MISSING_MESSAGE: paymentMethods.faq.question2.title (cs)
+    at k (.next/server/chunks/8337.js:1:42434)
+    at l (.next/server/chunks/8337.js:1:42598)
+    at m (.next/server/chunks/8337.js:1:43749)
+    at p (.next/server/app/[locale]/payment-methods/page.js:2:19098) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'paymentMethods.faq.question2.title (cs)'
+}
+Error: MISSING_MESSAGE: paymentMethods.faq.question2.answer (cs)
+    at k (.next/server/chunks/8337.js:1:42434)
+    at l (.next/server/chunks/8337.js:1:42598)
+    at m (.next/server/chunks/8337.js:1:43749)
+    at p (.next/server/app/[locale]/payment-methods/page.js:2:19179) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'paymentMethods.faq.question2.answer (cs)'
+}
+Error: MISSING_MESSAGE: paymentMethods.faq.question3.title (cs)
+    at k (.next/server/chunks/8337.js:1:42434)
+    at l (.next/server/chunks/8337.js:1:42598)
+    at m (.next/server/chunks/8337.js:1:43749)
+    at p (.next/server/app/[locale]/payment-methods/page.js:2:19320) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'paymentMethods.faq.question3.title (cs)'
+}
+Error: MISSING_MESSAGE: paymentMethods.faq.question3.answer (cs)
+    at k (.next/server/chunks/8337.js:1:42434)
+    at l (.next/server/chunks/8337.js:1:42598)
+    at m (.next/server/chunks/8337.js:1:43749)
+    at p (.next/server/app/[locale]/payment-methods/page.js:2:19401) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'paymentMethods.faq.question3.answer (cs)'
+}
+Error: MISSING_MESSAGE: paymentMethods.faq.question4.title (cs)
+    at k (.next/server/chunks/8337.js:1:42434)
+    at l (.next/server/chunks/8337.js:1:42598)
+    at m (.next/server/chunks/8337.js:1:43749)
+    at p (.next/server/app/[locale]/payment-methods/page.js:2:19542) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'paymentMethods.faq.question4.title (cs)'
+}
+Error: MISSING_MESSAGE: paymentMethods.faq.question4.answer (cs)
+    at k (.next/server/chunks/8337.js:1:42434)
+    at l (.next/server/chunks/8337.js:1:42598)
+    at m (.next/server/chunks/8337.js:1:43749)
+    at p (.next/server/app/[locale]/payment-methods/page.js:2:19623) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'paymentMethods.faq.question4.answer (cs)'
+}
+Layout - Locale: de
+Layout - Messages keys: [
+  'common',     'navigation',
+  'header',     'home',
+  'products',   'stock',
+  'categories', 'about',
+  'cart',       'auth',
+  'admin',      'filters',
+  'footer',     'returns'
+]
+Layout - Locale: cs
+Layout - Messages keys: [
+  'common',     'navigation',
+  'header',     'home',
+  'products',   'stock',
+  'categories', 'about',
+  'cart',       'auth',
+  'admin',      'filters',
+  'footer',     'paymentMethods',
+  'returns'
+]
+Layout - Locale: en
+Layout - Messages keys: [
+  'common',     'navigation',
+  'header',     'home',
+  'products',   'stock',
+  'categories', 'about',
+  'cart',       'auth',
+  'admin',      'filters',
+  'footer',     'terms',
+  'returns'
+]
+Layout - Locale: de
+Layout - Messages keys: [
+  'common',     'navigation',
+  'header',     'home',
+  'products',   'stock',
+  'categories', 'about',
+  'cart',       'auth',
+  'admin',      'filters',
+  'footer',     'returns'
+]
+Layout - Locale: cs
+Layout - Messages keys: [
+  'common',     'navigation',
+  'header',     'home',
+  'products',   'stock',
+  'categories', 'about',
+  'cart',       'auth',
+  'admin',      'filters',
+  'footer',     'paymentMethods',
+  'returns'
+]
+ ⚠ Unsupported metadata viewport is configured in metadata export in /categories. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata viewport is configured in metadata export in /about. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata viewport is configured in metadata export in /payment/success. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata viewport is configured in metadata export in /products. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata viewport is configured in metadata export in /_not-found. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata viewport is configured in metadata export in /admin/categories. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata viewport is configured in metadata export in /admin/orders. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata viewport is configured in metadata export in /admin/coupons. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata viewport is configured in metadata export in /[locale]/track-order. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata viewport is configured in metadata export in /admin/banners/new. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata viewport is configured in metadata export in /admin/banners. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata viewport is configured in metadata export in /admin/categories. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+Error occurred prerendering page "/admin/categories". Read more: https://nextjs.org/docs/messages/prerender-error
+Error [PrismaClientInitializationError]: 
+Invalid `prisma.category.findMany()` invocation:
+
+
+error: Environment variable not found: DATABASE_URL.
+  -->  schema.prisma:13
+   | 
+12 |   provider = "postgresql"
+13 |   url      = env("DATABASE_URL")
+   | 
+
+Validation Error Count: 1
+    at <unknown> (-->  schema.prisma:13)
+    at async g (.next/server/app/admin/categories/page.js:1:13565) {
+  clientVersion: '6.14.0',
+  errorCode: undefined,
+  retryable: undefined,
+  digest: '868183332'
+}
+Export encountered an error on /admin/categories/page: /admin/categories, exiting the build.
+Layout - Locale: en
+Layout - Messages keys: [
+  'common',     'navigation',
+  'header',     'home',
+  'products',   'stock',
+  'categories', 'about',
+  'cart',       'auth',
+  'admin',      'filters',
+  'footer',     'terms',
+  'returns'
+]
+   Generating static pages (33/135) 
+Layout - Locale: pl
+Layout - Messages keys: [
+  'common',        'navigation',
+  'header',        'home',
+  'products',      'stock',
+  'categories',    'about',
+  'cart',          'auth',
+  'admin',         'filters',
+  'footer',        'terms',
+  'privacy',       'returnForm',
+  'complaintForm', 'paymentMethods',
+  'profile',       'returns'
+]
+Layout - Locale: en
+Layout - Messages keys: [
+  'common',     'navigation',
+  'header',     'home',
+  'products',   'stock',
+  'categories', 'about',
+  'cart',       'auth',
+  'admin',      'filters',
+  'footer',     'terms',
+  'returns'
+]
+Layout - Locale: de
+Layout - Messages keys: [
+  'common',     'navigation',
+  'header',     'home',
+  'products',   'stock',
+  'categories', 'about',
+  'cart',       'auth',
+  'admin',      'filters',
+  'footer',     'returns'
+]
+ ⚠ Unsupported metadata viewport is configured in metadata export in /[locale]/categories. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata viewport is configured in metadata export in /[locale]/categories. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata viewport is configured in metadata export in /[locale]/categories. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata viewport is configured in metadata export in /[locale]/categories. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+Error occurred prerendering page "/de/categories". Read more: https://nextjs.org/docs/messages/prerender-error
+Error [PrismaClientInitializationError]: 
+Invalid `prisma.category.findMany()` invocation:
+
+
+error: Environment variable not found: DATABASE_URL.
+  -->  schema.prisma:13
+   | 
+12 |   provider = "postgresql"
+13 |   url      = env("DATABASE_URL")
+   | 
+
+Validation Error Count: 1
+    at <unknown> (-->  schema.prisma:13)
+    at async h (.next/server/app/[locale]/categories/page.js:1:735) {
+  clientVersion: '6.14.0',
+  errorCode: undefined,
+  retryable: undefined,
+  digest: '518623439'
+}
+Export encountered an error on /[locale]/categories/page: /de/categories, exiting the build.
+Layout - Locale: pl
+Layout - Messages keys: [
+  'common',        'navigation',
+  'header',        'home',
+  'products',      'stock',
+  'categories',    'about',
+  'cart',          'auth',
+  'admin',         'filters',
+  'footer',        'terms',
+  'privacy',       'returnForm',
+  'complaintForm', 'paymentMethods',
+  'profile',       'returns'
+]
+Layout - Locale: en
+Layout - Messages keys: [
+  'common',     'navigation',
+  'header',     'home',
+  'products',   'stock',
+  'categories', 'about',
+  'cart',       'auth',
+  'admin',      'filters',
+  'footer',     'terms',
+  'returns'
+]
+Layout - Locale: de
+Layout - Messages keys: [
+  'common',     'navigation',
+  'header',     'home',
+  'products',   'stock',
+  'categories', 'about',
+  'cart',       'auth',
+  'admin',      'filters',
+  'footer',     'returns'
+]
+Layout - Locale: cs
+Layout - Messages keys: [
+  'common',     'navigation',
+  'header',     'home',
+  'products',   'stock',
+  'categories', 'about',
+  'cart',       'auth',
+  'admin',      'filters',
+  'footer',     'paymentMethods',
+  'returns'
+]
+Layout - Locale: pl
+Layout - Messages keys: [
+  'common',        'navigation',
+  'header',        'home',
+  'products',      'stock',
+  'categories',    'about',
+  'cart',          'auth',
+  'admin',         'filters',
+  'footer',        'terms',
+  'privacy',       'returnForm',
+  'complaintForm', 'paymentMethods',
+  'profile',       'returns'
+]
+Layout - Locale: en
+Layout - Messages keys: [
+  'common',     'navigation',
+  'header',     'home',
+  'products',   'stock',
+  'categories', 'about',
+  'cart',       'auth',
+  'admin',      'filters',
+  'footer',     'terms',
+  'returns'
+]
+Layout - Locale: pl
+Layout - Messages keys: [
+  'common',        'navigation',
+  'header',        'home',
+  'products',      'stock',
+  'categories',    'about',
+  'cart',          'auth',
+  'admin',         'filters',
+  'footer',        'terms',
+  'privacy',       'returnForm',
+  'complaintForm', 'paymentMethods',
+  'profile',       'returns'
+]
+Layout - Locale: en
+Layout - Messages keys: [
+  'common',     'navigation',
+  'header',     'home',
+  'products',   'stock',
+  'categories', 'about',
+  'cart',       'auth',
+  'admin',      'filters',
+  'footer',     'terms',
+  'returns'
+]
+Layout - Locale: de
+Layout - Messages keys: [
+  'common',     'navigation',
+  'header',     'home',
+  'products',   'stock',
+  'categories', 'about',
+  'cart',       'auth',
+  'admin',      'filters',
+  'footer',     'returns'
+]
+Layout - Locale: cs
+Layout - Messages keys: [
+  'common',     'navigation',
+  'header',     'home',
+  'products',   'stock',
+  'categories', 'about',
+  'cart',       'auth',
+  'admin',      'filters',
+  'footer',     'paymentMethods',
+  'returns'
+]
+Layout - Locale: pl
+Layout - Messages keys: [
+  'common',        'navigation',
+  'header',        'home',
+  'products',      'stock',
+  'categories',    'about',
+  'cart',          'auth',
+  'admin',         'filters',
+  'footer',        'terms',
+  'privacy',       'returnForm',
+  'complaintForm', 'paymentMethods',
+  'profile',       'returns'
+]
+ ⚠ Unsupported metadata viewport is configured in metadata export in /[locale]/payment-methods. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata viewport is configured in metadata export in /[locale]/complaint-form. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+Error: MISSING_MESSAGE: complaintForm.form.descriptionPlaceholder (pl)
+    at l (.next/server/chunks/5527.js:1:45659)
+    at m (.next/server/chunks/5527.js:1:45823)
+    at n (.next/server/chunks/5527.js:1:46971)
+    at m (.next/server/app/[locale]/complaint-form/page.js:2:18779) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'complaintForm.form.descriptionPlaceholder (pl)'
+}
+Error: MISSING_MESSAGE: complaintForm.form.expectedResolution (pl)
+    at l (.next/server/chunks/5527.js:1:45659)
+    at m (.next/server/chunks/5527.js:1:45823)
+    at n (.next/server/chunks/5527.js:1:46971)
+    at m (.next/server/app/[locale]/complaint-form/page.js:2:18934) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'complaintForm.form.expectedResolution (pl)'
+}
+Error: MISSING_MESSAGE: complaintForm.form.expectedResolutionPlaceholder (pl)
+    at l (.next/server/chunks/5527.js:1:45659)
+    at m (.next/server/chunks/5527.js:1:45823)
+    at n (.next/server/chunks/5527.js:1:46971)
+    at m (.next/server/app/[locale]/complaint-form/page.js:2:19221) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'complaintForm.form.expectedResolutionPlaceholder (pl)'
+}
+ ⚠ Unsupported metadata viewport is configured in metadata export in /[locale]/complaint-form. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+Error: MISSING_MESSAGE: complaintForm (pl)
+    at <unknown> (.next/server/chunks/5527.js:1:45383)
+    at <unknown> (.next/server/chunks/5527.js:1:45435)
+    at <unknown> (.next/server/chunks/5527.js:1:47306)
+    at <unknown> (.next/server/chunks/5527.js:1:45243)
+    at aI (.next/server/chunks/5527.js:1:47436)
+    at <unknown> (.next/server/chunks/5527.js:1:49631)
+    at m (.next/server/app/[locale]/complaint-form/page.js:2:8491) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'complaintForm (pl)'
+}
+ ⚠ Unsupported metadata viewport is configured in metadata export in /[locale]/complaint-form. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+Error: MISSING_MESSAGE: complaintForm (pl)
+    at <unknown> (.next/server/chunks/5527.js:1:45383)
+    at <unknown> (.next/server/chunks/5527.js:1:45435)
+    at <unknown> (.next/server/chunks/5527.js:1:47306)
+    at <unknown> (.next/server/chunks/5527.js:1:45243)
+    at aI (.next/server/chunks/5527.js:1:47436)
+    at <unknown> (.next/server/chunks/5527.js:1:49631)
+    at m (.next/server/app/[locale]/complaint-form/page.js:2:8491) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'complaintForm (pl)'
+}
+ ⚠ Unsupported metadata viewport is configured in metadata export in /[locale]/complaint-form. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+Error: MISSING_MESSAGE: complaintForm (pl)
+    at <unknown> (.next/server/chunks/5527.js:1:45383)
+    at <unknown> (.next/server/chunks/5527.js:1:45435)
+    at <unknown> (.next/server/chunks/5527.js:1:47306)
+    at <unknown> (.next/server/chunks/5527.js:1:45243)
+    at aI (.next/server/chunks/5527.js:1:47436)
+    at <unknown> (.next/server/chunks/5527.js:1:49631)
+    at m (.next/server/app/[locale]/complaint-form/page.js:2:8491) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'complaintForm (pl)'
+}
+ ⚠ Unsupported metadata viewport is configured in metadata export in /[locale]/privacy-policy. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+Error: MISSING_MESSAGE: privacy (en)
+    at <unknown> (.next/server/chunks/8337.js:1:42158)
+    at aB (.next/server/chunks/8337.js:1:42210)
+    at <unknown> (.next/server/app/[locale]/payment-methods/page.js:2:9762)
+    at <unknown> (.next/server/app/[locale]/payment-methods/page.js:2:9794)
+    at <unknown> (.next/server/app/[locale]/payment-methods/page.js:2:9901)
+    at <unknown> (.next/server/app/[locale]/payment-methods/page.js:2:10023)
+    at async g (.next/server/app/[locale]/privacy-policy/page.js:2:7639) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'privacy (en)'
+}
+ ⚠ Unsupported metadata viewport is configured in metadata export in /[locale]/privacy-policy. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⨯ Next.js build worker exited with code: 1 and signal: null

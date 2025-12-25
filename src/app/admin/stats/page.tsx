@@ -1,6 +1,8 @@
 import { prisma } from '@/lib/prisma'
 import { BarChart3, TrendingUp, Users, ShoppingBag, Package, DollarSign } from 'lucide-react'
 
+export const dynamic = 'force-dynamic'
+
 export default async function AdminStatsPage() {
   // Pobierz statystyki
   const [

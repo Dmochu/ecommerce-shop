@@ -285,6 +285,48 @@
       "verification": {
         "title": "Ověření",
         "content": "Ověření transakce"
+      },
+      "encryption": {
+        "title": "Šifrování dat",
+        "content": "Vaše data jsou v bezpečí"
+      }
+    },
+    "process": {
+      "title": "Proces platby",
+      "step1": {
+        "title": "Vyberte metodu",
+        "content": "Vyberte preferovanou platební metodu"
+      },
+      "step2": {
+        "title": "Zadejte údaje",
+        "content": "Zadejte požadované platební údaje"
+      },
+      "step3": {
+        "title": "Potvrďte",
+        "content": "Potvrďte transakci"
+      },
+      "step4": {
+        "title": "Hotovo",
+        "content": "Obdržíte potvrzení o platbě"
+      }
+    },
+    "faq": {
+      "title": "Často kladené otázky",
+      "question1": {
+        "title": "Jaké platební metody přijímáte?",
+        "answer": "Přijímáme kreditní karty, bankovní převody a mobilní platby."
+      },
+      "question2": {
+        "title": "Jsou platby bezpečné?",
+        "answer": "Ano, všechny transakce jsou šifrované a bezpečné."
+      },
+      "question3": {
+        "title": "Kdy obdržím refundaci?",
+        "answer": "Refundace jsou zpracovány do 14 pracovních dnů."
+      },
+      "question4": {
+        "title": "Mohu zrušit platbu?",
+        "answer": "Ano, můžete zrušit platbu před dokončením objednávky."
       }
     }
   },
