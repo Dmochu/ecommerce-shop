@@ -447,5 +447,10 @@
     "orders": "Zamówienia",
     "noOrders": "Brak zamówień",
     "viewOrder": "Zobacz zamówienie"
+  },
+  "returns": {
+    "title": "Zwroty",
+    "description": "Informacje o zwrotach produktów",
+    "backToHome": "Powrót do strony głównej"
   }
 }

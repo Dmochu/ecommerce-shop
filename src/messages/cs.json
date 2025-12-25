@@ -287,5 +287,10 @@
         "content": "Ověření transakce"
       }
     }
+  },
+  "returns": {
+    "title": "Vrácení",
+    "description": "Informace o vrácení produktů",
+    "backToHome": "Zpět na hlavní stránku"
   }
 }

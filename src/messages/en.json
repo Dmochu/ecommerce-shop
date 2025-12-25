@@ -252,5 +252,14 @@
     "allRightsReserved": "All rights reserved",
     "privacy": "Privacy policy",
     "terms": "Terms"
+  },
+  "terms": {
+    "title": "Terms and Conditions",
+    "description": "Terms and conditions for using the store"
+  },
+  "returns": {
+    "title": "Returns",
+    "description": "Information about product returns",
+    "backToHome": "Back to home"
   }
 }

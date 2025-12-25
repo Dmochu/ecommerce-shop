@@ -252,5 +252,10 @@
     "allRightsReserved": "Alle Rechte vorbehalten",
     "privacy": "Datenschutz",
     "terms": "Bedingungen"
+  },
+  "returns": {
+    "title": "Rückgaben",
+    "description": "Informationen zu Produktrückgaben",
+    "backToHome": "Zurück zur Startseite"
   }
 }
