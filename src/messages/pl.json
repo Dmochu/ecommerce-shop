@@ -388,7 +388,8 @@
         "websiteIssue": "Problem ze stroną",
         "other": "Inne"
       },
-      "description": "Opis"
+      "description": "Opis",
+      "submit": "Wyślij"
     },
     "success": {
       "title": "Reklamacja została wysłana",
