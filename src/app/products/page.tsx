@@ -4,6 +4,9 @@ import CategoryFilter from '@/components/CategoryFilter'
 import AdvancedFilters from '@/components/AdvancedFilters'
 import { searchProducts, searchProductsWithFilters } from '@/lib/search'
 
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
+
 interface ProductsPageProps {
   searchParams: Promise<{
     category?: string
