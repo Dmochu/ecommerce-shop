@@ -86,8 +86,7 @@ export class SemanticSearchEngine {
             } : filters.availability === 'out-of-stock' ? {
               stock: 0
             } : {}
-          ],
-          isActive: true
+          ]
         },
         include: {
           category: true,
