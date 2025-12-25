@@ -53,12 +53,12 @@ export class SemanticSearchEngine {
           AND: [
             {
               OR: [
-                { name: { contains: query, mode: 'insensitive' } },
-                { description: { contains: query, mode: 'insensitive' } },
+                { name: { contains: query, mode: 'insensitive' as const } },
+                { description: { contains: query, mode: 'insensitive' as const } },
                 // Wyszukiwanie w synonimach
                 ...expandedQuery.synonyms.flatMap(synonym => [
-                  { name: { contains: synonym, mode: 'insensitive' } },
-                  { description: { contains: synonym, mode: 'insensitive' } }
+                  { name: { contains: synonym, mode: 'insensitive' as const } },
+                  { description: { contains: synonym, mode: 'insensitive' as const } }
                 ])
               ]
             },
