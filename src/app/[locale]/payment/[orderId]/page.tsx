@@ -55,7 +55,8 @@ export default async function PaymentPage({ params }: PaymentPageProps) {
   }
 
   // Utwórz Payment Intent
-  const response = await fetch(`${process.env.NEXT_PUBLIC_APP_URL}/api/payment/create-payment-intent`, {
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'
+  const response = await fetch(`${baseUrl}/api/payment/create-payment-intent`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
