@@ -56,12 +56,10 @@ export class SemanticSearchEngine {
                 { name: { contains: query, mode: 'insensitive' } },
                 { description: { contains: query, mode: 'insensitive' } },
                 // Wyszukiwanie w synonimach
-                ...expandedQuery.synonyms.map(synonym => ({
-                  OR: [
-                    { name: { contains: synonym, mode: 'insensitive' } },
-                    { description: { contains: synonym, mode: 'insensitive' } }
-                  ]
-                }))
+                ...expandedQuery.synonyms.flatMap(synonym => [
+                  { name: { contains: synonym, mode: 'insensitive' } },
+                  { description: { contains: synonym, mode: 'insensitive' } }
+                ])
               ]
             },
             // Filtry
