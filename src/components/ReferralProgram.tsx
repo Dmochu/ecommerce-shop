@@ -15,7 +15,8 @@ import {
   Link as LinkIcon,
   Star,
   Trophy,
-  Zap
+  Zap,
+  Clock
 } from 'lucide-react'
 
 interface ReferralProgramProps {
