@@ -387,13 +387,19 @@ export class LoyaltyEngine {
         where: {
           isActive: true,
           pointsCost: { lte: loyaltyUser.availablePoints },
-          OR: [
-            { validFrom: null },
-            { validFrom: { lte: new Date() } }
-          ],
-          OR: [
-            { validUntil: null },
-            { validUntil: { gte: new Date() } }
+          AND: [
+            {
+              OR: [
+                { validFrom: null },
+                { validFrom: { lte: new Date() } }
+              ]
+            },
+            {
+              OR: [
+                { validUntil: null },
+                { validUntil: { gte: new Date() } }
+              ]
+            }
           ]
         },
         orderBy: { pointsCost: 'asc' }
