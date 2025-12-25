@@ -3,6 +3,9 @@ import { prisma } from '@/lib/prisma'
 import { cookies } from 'next/headers'
 import jwt from 'jsonwebtoken'
 import Link from 'next/link'
+
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 import { 
   Package, 
   Tag, 
