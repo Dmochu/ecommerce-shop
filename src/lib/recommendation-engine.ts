@@ -149,7 +149,7 @@ export class RecommendationEngine {
   /**
    * Popularne/trending produkty
    */
-  private async getTrendingProducts(limit: number): Promise<RecommendationResult[]> {
+  public async getTrendingProducts(limit: number): Promise<RecommendationResult[]> {
     // Produkty z największą liczbą zakupów w ostatnim czasie
     const trendingProducts = await prisma.product.findMany({
       where: {
