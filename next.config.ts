@@ -12,6 +12,8 @@ const nextConfig = {
     // Ignoruj błędy TypeScript podczas buildowania (tylko ostrzeżenia)
     ignoreBuildErrors: false,
   },
+  // Wyłącz prerenderowanie dla wszystkich stron (będą renderowane na żądanie)
+  output: 'standalone',
 }
 
 export default withNextIntl(nextConfig)
