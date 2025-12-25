@@ -351,7 +351,7 @@ export default function ReturnFormPage() {
                 <button
                   type="button"
                   onClick={addItem}
-                  className="px-4 py-2 bg-tulinki-rose text-white rounded-lg hover:bg-tulinki-burgundy transition-colors"
+                  className="px-4 py-2 btn-secondary"
                 >
                   {t('form.items.addItem')}
                 </button>
@@ -416,7 +416,7 @@ export default function ReturnFormPage() {
                     <button
                       type="button"
                       onClick={() => removeItem(index)}
-                      className="mt-2 px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 transition-colors"
+                      className="mt-2 px-3 py-1 btn-danger text-sm"
                     >
                       {t('form.items.remove')}
                     </button>

@@ -388,7 +388,7 @@ export default function SearchResults({
                   onClick={() => handlePageChange(page)}
                   className={`px-3 py-2 border rounded-lg transition-colors ${
                     page === currentPage
-                      ? 'bg-blue-600 text-white border-blue-600'
+                      ? 'bg-tulinki-burgundy text-white border-tulinki-burgundy'
                       : 'border-gray-300 hover:bg-gray-50'
                   }`}
                 >

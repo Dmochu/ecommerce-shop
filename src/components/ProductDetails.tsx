@@ -42,11 +42,11 @@ export default function ProductDetails({ product, relatedProducts }: ProductDeta
       {/* Breadcrumb */}
       <nav className="text-sm text-gray-500">
         <ol className="flex space-x-2">
-          <li><Link href="/" className="hover:text-blue-600">Strona główna</Link></li>
+          <li><Link href="/" className="hover:text-tulinki-burgundy">Strona główna</Link></li>
           <li>/</li>
-          <li><Link href="/products" className="hover:text-blue-600">Produkty</Link></li>
+          <li><Link href="/products" className="hover:text-tulinki-burgundy">Produkty</Link></li>
           <li>/</li>
-          <li><Link href={`/products?category=${product.category.name}`} className="hover:text-blue-600">{product.category.name}</Link></li>
+          <li><Link href={`/products?category=${product.category.name}`} className="hover:text-tulinki-burgundy">{product.category.name}</Link></li>
           <li>/</li>
           <li className="text-gray-900">{product.name}</li>
         </ol>
@@ -74,7 +74,7 @@ export default function ProductDetails({ product, relatedProducts }: ProductDeta
         {/* Product Info */}
         <div className="space-y-6">
           <div>
-            <span className="text-sm text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
+            <span className="text-sm text-tulinki-burgundy bg-tulinki-rose/20 px-3 py-1 rounded-full">
               {product.category.name}
             </span>
           </div>
@@ -95,7 +95,7 @@ export default function ProductDetails({ product, relatedProducts }: ProductDeta
             <span className="text-sm text-gray-500">(4.5/5)</span>
           </div>
 
-          <div className="text-3xl font-bold text-blue-600">
+          <div className="text-3xl font-bold text-tulinki-burgundy">
             {product.price.toFixed(2)} zł
           </div>
 
@@ -139,7 +139,7 @@ export default function ProductDetails({ product, relatedProducts }: ProductDeta
               <button
                 onClick={handleAddToCart}
                 disabled={product.stock === 0}
-                className="flex-1 bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors flex items-center justify-center space-x-2"
+                className="flex-1 btn-primary py-3 px-6 disabled:bg-gray-300 disabled:cursor-not-allowed"
               >
                 <ShoppingCart className="h-5 w-5" />
                 <span>Dodaj do koszyka</span>

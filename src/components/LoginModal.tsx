@@ -403,7 +403,7 @@ export default function LoginModal({ isOpen, onClose, onSwitchToRegister }: Logi
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 disabled:opacity-50 transition-colors font-medium"
+              className="w-full btn-primary disabled:opacity-50 font-medium"
             >
               {isLoading ? t('auth.processing') : (isLogin ? t('auth.login') : t('auth.register'))}
             </button>
@@ -438,7 +438,7 @@ export default function LoginModal({ isOpen, onClose, onSwitchToRegister }: Logi
         })
                   setError('')
                 }}
-                className="text-blue-600 hover:text-blue-700 hover:underline font-medium transition-all duration-200"
+                className="text-tulinki-burgundy hover:text-tulinki-wine hover:underline font-medium transition-all duration-200"
               >
                 {isLogin ? t('auth.register') : t('auth.login')}
               </button>

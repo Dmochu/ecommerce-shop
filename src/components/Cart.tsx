@@ -213,7 +213,7 @@ export default function Cart({ isOpen, onClose }: CartProps) {
                 <p className="text-gray-600 mb-4">{t('cart.empty')}</p>
                 <button
                   onClick={onClose}
-                  className="text-blue-600 hover:text-blue-700 font-medium"
+                  className="text-tulinki-burgundy hover:text-tulinki-wine font-medium"
                 >
                   {t('cart.goToShop')}
                 </button>
@@ -281,7 +281,7 @@ export default function Cart({ isOpen, onClose }: CartProps) {
                     <button
                       onClick={handleApplyCoupon}
                       disabled={!couponCode.trim() || couponLoading}
-                      className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-sm"
+                      className="px-4 py-2 btn-primary disabled:opacity-50 disabled:cursor-not-allowed text-sm"
                     >
                       {couponLoading ? '...' : 'Zastosuj'}
                     </button>
@@ -327,7 +327,7 @@ export default function Cart({ isOpen, onClose }: CartProps) {
                 
                 <div className="flex justify-between items-center border-t pt-2">
                   <span className="font-medium text-lg">Razem:</span>
-                  <span className="font-bold text-lg text-blue-600">
+                  <span className="font-bold text-lg text-tulinki-burgundy">
                     {getFinalTotal().toFixed(2)} zł
                   </span>
                 </div>
@@ -491,7 +491,7 @@ export default function Cart({ isOpen, onClose }: CartProps) {
                 {!showGuestForm && (
                   <button
                     onClick={() => setShowGuestForm(true)}
-                    className="flex-1 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+                    className="flex-1 btn-success"
                   >
                     Zakup jako gość
                   </button>
@@ -500,7 +500,7 @@ export default function Cart({ isOpen, onClose }: CartProps) {
                 <button
                   onClick={handleCheckout}
                   disabled={isLoading || (showGuestForm && (!guestData.email || !guestData.name || !guestData.phone || !guestData.address || !guestData.city || !guestData.postalCode))}
-                  className="flex-1 px-4 py-2 bg-tulinki-burgundy text-white rounded-lg hover:bg-tulinki-wine disabled:opacity-50 transition-colors"
+                  className="flex-1 btn-primary disabled:opacity-50"
                 >
                   {isLoading ? t('common.loading') : t('cart.checkout')}
                 </button>

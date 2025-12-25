@@ -252,5 +252,95 @@
     "allRightsReserved": "Wszystkie prawa zastrzeżone",
     "privacy": "Polityka prywatności",
     "terms": "Regulamin"
+  },
+  "terms": {
+    "title": "Regulamin zakupów",
+    "description": "Regulamin określa zasady korzystania ze sklepu internetowego",
+    "section1": {
+      "title": "1. Postanowienia ogólne",
+      "content": "Niniejszy regulamin określa zasady korzystania ze sklepu internetowego. Korzystając ze sklepu, akceptujesz postanowienia niniejszego regulaminu. Sklep zastrzega sobie prawo do zmiany regulaminu w dowolnym momencie."
+    },
+    "section2": {
+      "title": "2. Definicje",
+      "content": "Sklep - oznacza sklep internetowy dostępny pod adresem www. Sprzedawca - oznacza podmiot prowadzący sklep. Klient - oznacza osobę fizyczną, prawną lub jednostkę organizacyjną nieposiadającą osobowości prawnej, która korzysta ze sklepu."
+    },
+    "section3": {
+      "title": "3. Zawarcie umowy",
+      "content": "Umowa sprzedaży zostaje zawarta w momencie złożenia zamówienia przez Klienta i potwierdzenia przyjęcia zamówienia przez Sprzedawcę. Sprzedawca potwierdza przyjęcie zamówienia poprzez wysłanie wiadomości e-mail na adres podany przez Klienta."
+    },
+    "section4": {
+      "title": "4. Ceny i płatności",
+      "content": "Wszystkie ceny produktów podane w sklepie są cenami brutto i wyrażone są w złotych polskich (PLN). Ceny nie obejmują kosztów dostawy, które są podane osobno. Płatność może być dokonana przelewem bankowym, kartą płatniczą lub przy odbiorze."
+    },
+    "section5": {
+      "title": "5. Dostawa",
+      "content": "Dostawa produktów odbywa się na terenie Polski oraz wybranych krajów. Koszty dostawy są podane przy składaniu zamówienia. Czas realizacji zamówienia wynosi od 2 do 5 dni roboczych, w zależności od wybranej metody dostawy."
+    },
+    "section6": {
+      "title": "6. Prawo odstąpienia od umowy",
+      "content": "Klient ma prawo odstąpić od umowy w terminie 14 dni od dnia otrzymania produktu, bez podania przyczyny. Aby skorzystać z prawa odstąpienia, Klient powinien poinformować Sprzedawcę o swojej decyzji."
+    },
+    "section7": {
+      "title": "7. Reklamacje",
+      "content": "Klient ma prawo złożyć reklamację w przypadku stwierdzenia wady produktu. Reklamacja powinna być złożona w formie pisemnej lub elektronicznej w terminie 2 lat od daty dostawy produktu."
+    },
+    "section8": {
+      "title": "8. Ochrona danych osobowych",
+      "content": "Szczegółowe informacje dotyczące przetwarzania danych osobowych znajdują się w Polityce prywatności dostępnej na stronie sklepu."
+    },
+    "section9": {
+      "title": "9. Własność intelektualna",
+      "content": "Wszystkie treści zamieszczone w sklepie, w tym teksty, grafiki, logo, są chronione prawem autorskim i stanowią własność Sprzedawcy lub jego partnerów."
+    },
+    "section10": {
+      "title": "10. Postanowienia końcowe",
+      "content": "W sprawach nieuregulowanych w niniejszym regulaminie mają zastosowanie przepisy prawa polskiego, w szczególności Kodeksu cywilnego oraz ustawy o prawach konsumenta."
+    },
+    "lastUpdated": "Ostatnia aktualizacja"
+  },
+  "privacy": {
+    "title": "Polityka prywatności",
+    "description": "Polityka prywatności określa zasady przetwarzania danych osobowych",
+    "section1": {
+      "title": "1. Administrator danych",
+      "content": "Administratorem danych osobowych jest właściciel sklepu internetowego. Kontakt z administratorem możliwy jest poprzez formularz kontaktowy dostępny na stronie sklepu lub pod adresem e-mail podanym w sekcji kontakt."
+    },
+    "section2": {
+      "title": "2. Zakres zbieranych danych",
+      "content": "Sklep zbiera następujące dane osobowe: imię i nazwisko, adres e-mail, numer telefonu, adres dostawy, dane dotyczące zamówień oraz preferencje zakupowe. Niektóre dane mogą być zbierane automatycznie podczas korzystania ze sklepu."
+    },
+    "section3": {
+      "title": "3. Cel przetwarzania danych",
+      "content": "Dane osobowe są przetwarzane w celu realizacji zamówień, obsługi klienta, marketingu bezpośredniego (za zgodą), analizy statystycznej oraz zapewnienia bezpieczeństwa transakcji."
+    },
+    "section4": {
+      "title": "4. Podstawa prawna przetwarzania",
+      "content": "Przetwarzanie danych osobowych odbywa się na podstawie: zgody użytkownika, wykonania umowy, obowiązku prawnego oraz prawnie uzasadnionego interesu administratora."
+    },
+    "section5": {
+      "title": "5. Okres przechowywania danych",
+      "content": "Dane osobowe są przechowywane przez okres niezbędny do realizacji celów, dla których zostały zebrane, lub przez okres wymagany przepisami prawa, w szczególności przepisami podatkowymi."
+    },
+    "section6": {
+      "title": "6. Prawa użytkownika",
+      "content": "Użytkownik ma prawo do: dostępu do swoich danych, sprostowania danych, usunięcia danych, ograniczenia przetwarzania, przenoszenia danych oraz wniesienia sprzeciwu wobec przetwarzania."
+    },
+    "section7": {
+      "title": "7. Udostępnianie danych",
+      "content": "Dane osobowe mogą być udostępniane podmiotom trzecim wyłącznie w zakresie niezbędnym do realizacji zamówień, takich jak firmy kurierskie, dostawcy usług płatniczych oraz podmioty świadczące usługi IT."
+    },
+    "section8": {
+      "title": "8. Pliki cookies",
+      "content": "Sklep wykorzystuje pliki cookies w celu zapewnienia prawidłowego działania strony, analizy ruchu oraz personalizacji treści. Użytkownik może zarządzać ustawieniami cookies w przeglądarce."
+    },
+    "section9": {
+      "title": "9. Bezpieczeństwo danych",
+      "content": "Sklep stosuje odpowiednie środki techniczne i organizacyjne zapewniające ochronę danych osobowych przed nieuprawnionym dostępem, utratą, zniszczeniem lub modyfikacją."
+    },
+    "section10": {
+      "title": "10. Zmiany w polityce prywatności",
+      "content": "Administrator zastrzega sobie prawo do wprowadzania zmian w polityce prywatności. O wszelkich zmianach użytkownicy będą informowani poprzez komunikat na stronie sklepu lub wiadomość e-mail."
+    },
+    "lastUpdated": "Ostatnia aktualizacja"
   }
 }

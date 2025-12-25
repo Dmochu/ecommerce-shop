@@ -226,7 +226,7 @@ export default function LoyaltyRewards({
                 disabled={!isAvailable || isRedeeming}
                 className={`w-full py-2 px-4 rounded-lg font-medium transition-colors ${
                   isAvailable && !isRedeeming
-                    ? 'bg-blue-600 text-white hover:bg-blue-700'
+                    ? 'btn-primary'
                     : 'bg-gray-300 text-gray-500 cursor-not-allowed'
                 }`}
               >
