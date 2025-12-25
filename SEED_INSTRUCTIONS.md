@@ -34,9 +34,36 @@
    DATABASE_URL=$(grep DATABASE_URL .env.local | cut -d '=' -f2) npm run db:seed
    ```
 
-### Metoda C: Przez Vercel Functions (najprostsze)
+### Metoda C: Przez API Endpoint (najprostsze - ZALECANE) ⭐
 
-Możesz też stworzyć API endpoint do seedowania, który uruchomisz raz przez przeglądarkę.
+1. **Pobierz SEED_SECRET z Vercel:**
+   ```bash
+   vercel env pull .env.local
+   grep SEED_SECRET .env.local
+   ```
+
+2. **Uruchom seed przez przeglądarkę:**
+   Otwórz w przeglądarce:
+   ```
+   https://ecommerce-shop-1.vercel.app/api/admin/seed?secret=TWÓJ_SEED_SECRET
+   ```
+   
+   Lub użyj curl:
+   ```bash
+   curl "https://ecommerce-shop-1.vercel.app/api/admin/seed?secret=TWÓJ_SEED_SECRET"
+   ```
+
+3. **Sprawdź odpowiedź** - powinieneś zobaczyć:
+   ```json
+   {
+     "success": true,
+     "message": "Dodano X nowych produktów",
+     "products": X,
+     "categories": 6
+   }
+   ```
+
+**UWAGA:** SEED_SECRET został już dodany do Vercel. Możesz go zobaczyć w Vercel Dashboard → Settings → Environment Variables.
 
 ## Co zostało dodane:
 
