@@ -23,8 +23,8 @@ export function useVoiceSearch(options: VoiceSearchOptions = {}) {
   const [error, setError] = useState<string | null>(null)
   
   const recognitionRef = useRef<any>(null)
-  const onResultRef = useRef<(result: VoiceSearchResult) => void>()
-  const onErrorRef = useRef<(error: string) => void>()
+  const onResultRef = useRef<((result: VoiceSearchResult) => void) | null>(null)
+  const onErrorRef = useRef<((error: string) => void) | null>(null)
 
   const {
     language = 'pl-PL',
