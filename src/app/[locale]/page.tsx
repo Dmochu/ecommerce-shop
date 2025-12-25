@@ -1,4 +1,7 @@
 import { prisma } from '@/lib/prisma'
+
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 import HomeContent from '@/components/HomeContent'
 
 export default async function Home() {
