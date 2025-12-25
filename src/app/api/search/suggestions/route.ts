@@ -17,8 +17,7 @@ export async function GET(request: NextRequest) {
       where: {
         OR: [
           { name: { contains: searchTerm, mode: 'insensitive' } },
-          { description: { contains: searchTerm, mode: 'insensitive' } },
-          { tags: { has: searchTerm } }
+          { description: { contains: searchTerm, mode: 'insensitive' } }
         ],
         isActive: true
       },
