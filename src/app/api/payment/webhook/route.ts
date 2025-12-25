@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { stripe } from '@/lib/stripe'
+import { getStripe } from '@/lib/stripe'
 import { prisma } from '@/lib/prisma'
 import { headers } from 'next/headers'
 
@@ -21,6 +21,7 @@ export async function POST(request: NextRequest) {
     let event
 
     try {
+      const stripe = getStripe()
       event = stripe.webhooks.constructEvent(body, signature, webhookSecret)
     } catch (err) {
       console.error('Webhook signature verification failed:', err)
