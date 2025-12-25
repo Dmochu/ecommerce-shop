@@ -12,7 +12,9 @@ import {
 import { CreditCard, Lock, CheckCircle, XCircle } from 'lucide-react'
 
 // Załaduj Stripe (klucz publiczny)
-const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!)
+const stripePromise = process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY 
+  ? loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY)
+  : Promise.resolve(null)
 
 interface PaymentFormProps {
   orderId: string
@@ -146,6 +148,17 @@ export default function PaymentForm({ orderId, amount, clientSecret }: PaymentFo
     return (
       <div className="flex items-center justify-center py-12">
         <div className="h-8 w-8 border-2 border-blue-600 border-t-transparent rounded-full animate-spin" />
+      </div>
+    )
+  }
+
+  if (!stripePromise) {
+    return (
+      <div className="flex items-center justify-center py-12">
+        <div className="text-center">
+          <p className="text-red-600 mb-2">Stripe nie jest skonfigurowany</p>
+          <p className="text-sm text-gray-500">Dodaj NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY do zmiennych środowiskowych</p>
+        </div>
       </div>
     )
   }
