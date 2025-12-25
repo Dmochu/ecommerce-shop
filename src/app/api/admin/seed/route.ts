@@ -10,9 +10,15 @@ export async function GET(request: Request) {
     const secret = searchParams.get('secret')
     
     // Prosta ochrona - w produkcji użyj lepszego systemu autoryzacji
-    if (secret !== process.env.SEED_SECRET) {
+    const expectedSecret = process.env.SEED_SECRET
+    if (!expectedSecret || secret !== expectedSecret) {
+      console.log('Seed auth failed:', {
+        provided: secret ? `${secret.substring(0, 10)}...` : 'empty',
+        expected: expectedSecret ? `${expectedSecret.substring(0, 10)}...` : 'empty',
+        match: secret === expectedSecret
+      })
       return NextResponse.json(
-        { error: 'Unauthorized' },
+        { error: 'Unauthorized', debug: process.env.NODE_ENV === 'development' ? { providedLength: secret?.length, expectedLength: expectedSecret?.length } : undefined },
         { status: 401 }
       )
     }
