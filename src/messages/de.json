@@ -255,7 +255,48 @@
   },
   "privacy": {
     "title": "Datenschutzrichtlinie",
-    "description": "Die Datenschutzrichtlinie definiert die Regeln für die Datenverarbeitung"
+    "description": "Die Datenschutzrichtlinie definiert die Regeln für die Datenverarbeitung",
+    "section1": {
+      "title": "1. Datenadministrator",
+      "content": "Der Administrator personenbezogener Daten ist der Eigentümer des Online-Shops. Der Kontakt mit dem Administrator ist über das auf der Shop-Website verfügbare Kontaktformular oder unter der in der Kontaktsektion angegebenen E-Mail-Adresse möglich."
+    },
+    "section2": {
+      "title": "2. Umfang der gesammelten Daten",
+      "content": "Der Shop sammelt folgende personenbezogene Daten: Vor- und Nachname, E-Mail-Adresse, Telefonnummer, Lieferadresse, Bestelldaten und Einkaufspräferenzen. Einige Daten können automatisch bei der Nutzung des Shops gesammelt werden."
+    },
+    "section3": {
+      "title": "3. Zweck der Datenverarbeitung",
+      "content": "Personenbezogene Daten werden zum Zweck der Auftragsabwicklung, des Kundenservice, des Direktmarketings (mit Zustimmung), der statistischen Analyse und der Gewährleistung der Transaktionssicherheit verarbeitet."
+    },
+    "section4": {
+      "title": "4. Rechtsgrundlage für die Verarbeitung",
+      "content": "Die Verarbeitung personenbezogener Daten erfolgt auf der Grundlage von: Benutzerzustimmung, Vertragserfüllung, gesetzlicher Verpflichtung und berechtigtem Interesse des Administrators."
+    },
+    "section5": {
+      "title": "5. Aufbewahrungsdauer der Daten",
+      "content": "Personenbezogene Daten werden für den Zeitraum gespeichert, der zur Erreichung der Zwecke, für die sie gesammelt wurden, erforderlich ist, oder für den Zeitraum, der gesetzlich vorgeschrieben ist, insbesondere durch Steuervorschriften."
+    },
+    "section6": {
+      "title": "6. Benutzerrechte",
+      "content": "Der Benutzer hat das Recht auf: Zugang zu seinen Daten, Berichtigung von Daten, Löschung von Daten, Einschränkung der Verarbeitung, Übertragung von Daten und Widerspruch gegen die Verarbeitung."
+    },
+    "section7": {
+      "title": "7. Datenweitergabe",
+      "content": "Personenbezogene Daten können nur im erforderlichen Umfang für die Auftragsabwicklung an Dritte weitergegeben werden, wie z. B. Kurierunternehmen, Zahlungsdienstleister und Unternehmen, die IT-Dienstleistungen erbringen."
+    },
+    "section8": {
+      "title": "8. Cookies",
+      "content": "Der Shop verwendet Cookies, um den ordnungsgemäßen Betrieb der Website, die Verkehrsanalyse und die Personalisierung von Inhalten sicherzustellen. Der Benutzer kann die Cookie-Einstellungen im Browser verwalten."
+    },
+    "section9": {
+      "title": "9. Datensicherheit",
+      "content": "Der Shop wendet angemessene technische und organisatorische Maßnahmen an, um personenbezogene Daten vor unbefugtem Zugriff, Verlust, Zerstörung oder Änderung zu schützen."
+    },
+    "section10": {
+      "title": "10. Änderungen an der Datenschutzrichtlinie",
+      "content": "Der Administrator behält sich das Recht vor, Änderungen an der Datenschutzrichtlinie vorzunehmen. Benutzer werden über alle Änderungen durch eine Nachricht auf der Shop-Website oder per E-Mail informiert."
+    },
+    "lastUpdated": "Zuletzt aktualisiert"
   },
   "returnForm": {
     "title": "Rückgabeformular",
