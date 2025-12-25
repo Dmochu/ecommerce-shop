@@ -376,7 +376,12 @@
       "address": "Adres",
       "city": "Miasto",
       "postalCode": "Kod pocztowy",
-      "country": "Kraj"
+      "country": "Kraj",
+      "items": {
+        "product": "Produkt",
+        "quantity": "Ilość",
+        "condition": "Stan"
+      }
     }
   },
   "complaintForm": {
