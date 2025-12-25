@@ -252,5 +252,40 @@
     "allRightsReserved": "Všechna práva vyhrazena",
     "privacy": "Ochrana osobních údajů",
     "terms": "Podmínky"
+  },
+  "paymentMethods": {
+    "title": "Způsoby platby",
+    "description": "Informace o dostupných způsobech platby",
+    "backToHome": "Zpět na hlavní stránku",
+    "methods": {
+      "title": "Dostupné způsoby platby",
+      "creditCards": {
+        "title": "Platební karty",
+        "description": "Přijímáme všechny hlavní platební karty"
+      },
+      "mobilePayments": {
+        "title": "Mobilní platby",
+        "description": "Platby prostřednictvím telefonu"
+      },
+      "bankTransfer": {
+        "title": "Bankovní převod",
+        "description": "Tradiční bankovní převod"
+      },
+      "cashOnDelivery": {
+        "title": "Platba na dobírku",
+        "description": "Zaplaťte při převzetí"
+      }
+    },
+    "security": {
+      "title": "Bezpečnost",
+      "ssl": {
+        "title": "SSL šifrování",
+        "content": "Všechny transakce jsou šifrované"
+      },
+      "verification": {
+        "title": "Ověření",
+        "content": "Ověření transakce"
+      }
+    }
   }
 }
