@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+:root {
+  /* Tulinki-inspired color palette */
+  --background: #fefcfb;
+  --foreground: #2d1b1b;
+  
+  /* Primary colors - warm pastels */
+  --primary-rose: #f4a6a6;
+  --primary-peach: #f5c6a6;
+  --primary-burgundy: #8b3a3a;
+  --primary-mocha: #8b6f47;
+  
+  /* Secondary colors - earth tones */
+  --secondary-beige: #f5f0e8;
+  --secondary-cream: #faf7f2;
+  --secondary-nut: #d4a574;
+  --secondary-wine: #6b2c3e;
+  
+  /* Accent colors */
+  --accent-lavender: #d4b5d4;
+  --accent-sage: #a8c09a;
+  --accent-coral: #f4a6a6;
+  
+  /* Neutral colors */
+  --neutral-warm: #f8f6f3;
+  --neutral-cool: #f0f0f0;
+  --text-warm: #3d2b2b;
+  --text-soft: #6b5b5b;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  
+  /* Custom color variables */
+  --color-primary-rose: var(--primary-rose);
+  --color-primary-peach: var(--primary-peach);
+  --color-primary-burgundy: var(--primary-burgundy);
+  --color-primary-mocha: var(--primary-mocha);
+  --color-secondary-beige: var(--secondary-beige);
+  --color-secondary-cream: var(--secondary-cream);
+  --color-secondary-nut: var(--secondary-nut);
+  --color-secondary-wine: var(--secondary-wine);
+  --color-accent-lavender: var(--accent-lavender);
+  --color-accent-sage: var(--accent-sage);
+  --color-accent-coral: var(--accent-coral);
+  --color-neutral-warm: var(--neutral-warm);
+  --color-neutral-cool: var(--neutral-cool);
+  --color-text-warm: var(--text-warm);
+  --color-text-soft: var(--text-soft);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1a1414;
+    --foreground: #f5f0e8;
+    --primary-rose: #d4a6a6;
+    --primary-peach: #d4b5a6;
+    --primary-burgundy: #a64a4a;
+    --primary-mocha: #a68a5a;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+/* Custom utility classes for Tulinki-inspired design */
+.bg-tulinki-rose { background-color: var(--primary-rose); }
+.bg-tulinki-peach { background-color: var(--primary-peach); }
+.bg-tulinki-burgundy { background-color: var(--primary-burgundy); }
+.bg-tulinki-mocha { background-color: var(--primary-mocha); }
+.bg-tulinki-beige { background-color: var(--secondary-beige); }
+.bg-tulinki-cream { background-color: var(--secondary-cream); }
+
+.text-tulinki-warm { color: var(--text-warm); }
+.text-tulinki-soft { color: var(--text-soft); }
+
+.border-tulinki-rose { border-color: var(--primary-rose); }
+.border-tulinki-peach { border-color: var(--primary-peach); }
+.border-tulinki-burgundy { border-color: var(--primary-burgundy); }
+
+/* Gradient backgrounds inspired by ombre yarns */
+.gradient-tulinki-sunset {
+  background: linear-gradient(135deg, #f4a6a6 0%, #f5c6a6 50%, #d4a574 100%);
+}
+
+.gradient-tulinki-forest {
+  background: linear-gradient(135deg, #a8c09a 0%, #8b6f47 50%, #6b2c3e 100%);
+}
+
+.gradient-tulinki-lavender {
+  background: linear-gradient(135deg, #d4b5d4 0%, #f4a6a6 50%, #f5c6a6 100%);
+}

@@ -1,0 +1,877 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Product {
+  id          String   @id @default(cuid())
+  name        String
+  description String
+  price       Float
+  image       String
+  stock       Int      @default(0)
+  categoryId  String
+  category    Category @relation(fields: [categoryId], references: [id])
+  isPopular   Boolean  @default(false)
+  isRecommended Boolean @default(false)
+  isFeatured  Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  orderItems  OrderItem[]
+  reviews     Review[]
+  wishlist    Wishlist[]
+  stockNotifications StockNotification[]
+  userBehaviors UserBehavior[]
+  recommendations ProductRecommendation[]
+  similarProducts ProductSimilarity[]
+  similarToProducts ProductSimilarity[] @relation("SimilarProducts")
+
+  @@index([categoryId])
+  @@index([name])
+  @@index([isPopular])
+  @@index([isRecommended])
+  @@index([isFeatured])
+}
+
+model Category {
+  id          String    @id @default(cuid())
+  name        String    @unique
+  image       String?
+  isPopular   Boolean   @default(false)
+  isFeatured  Boolean   @default(false)
+  description String?
+  products    Product[]
+  preferences UserPreference[]
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@index([isPopular])
+  @@index([isFeatured])
+}
+
+model Banner {
+  id        String   @id @default(cuid())
+  title     String
+  subtitle  String?
+  image     String
+  link      String?
+  active    Boolean  @default(true)
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  password  String
+  role      Role     @default(USER)
+  
+  // Podstawowe dane osobowe
+  firstName String?
+  lastName  String?
+  phone     String?
+  dateOfBirth DateTime?
+  gender    Gender?
+  
+  // Adres domowy
+  address   String?
+  city      String?
+  postalCode String?
+  country   String?  @default("Polska")
+  
+  // Dane biznesowe (dla firm)
+  isBusiness Boolean @default(false)
+  companyName String?
+  nip        String?
+  regon      String?
+  businessAddress String?
+  businessCity String?
+  businessPostalCode String?
+  
+  // Preferencje klienta
+  newsletter Boolean @default(false)
+  smsMarketing Boolean @default(false)
+  preferredLanguage String? @default("pl")
+  timezone   String? @default("Europe/Warsaw")
+  
+  // Dane techniczne
+  lastLogin DateTime?
+  isActive Boolean @default(true)
+  emailVerified Boolean @default(false)
+  phoneVerified Boolean @default(false)
+  
+  // Relacje
+  orders    Order[]
+  reviews   Review[]
+  addresses UserAddress[]
+  helpfulVotes ReviewHelpfulVote[]
+  reviewReplies ReviewReply[]
+  wishlist  Wishlist[]
+  stockNotifications StockNotification[]
+  newsletter Newsletter?
+  newsletterCampaigns NewsletterCampaign[]
+  userBehaviors UserBehavior[]
+  preferences UserPreference[]
+  loyaltyUsers LoyaltyUser[]
+  loyaltyTransactions LoyaltyTransaction[]
+  referralsAsReferrer Referral[] @relation("Referrer")
+  referralsAsReferee Referral[] @relation("Referee")
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([email])
+  @@index([phone])
+  @@index([isBusiness])
+  @@index([isActive])
+}
+
+model UserAddress {
+  id        String @id @default(cuid())
+  userId    String
+  user      User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  type      AddressType @default(HOME)
+  firstName String
+  lastName  String
+  company   String?
+  phone     String?
+  address   String
+  city      String
+  postalCode String
+  country   String @default("Polska")
+  isDefault Boolean @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId])
+  @@index([type])
+}
+
+enum AddressType {
+  HOME
+  WORK
+  BILLING
+  OTHER
+}
+
+model Order {
+  id            String      @id @default(cuid())
+  userId        String?
+  user          User?       @relation(fields: [userId], references: [id])
+  status        OrderStatus @default(PENDING)
+  total         Float
+  items         OrderItem[]
+  paymentStatus PaymentStatus @default(PENDING)
+  stripePaymentIntentId String?
+  shippingAddress ShippingAddress?
+  guestEmail    String?     // Email dla zamówień gości
+  guestName     String?     // Imię i nazwisko dla zamówień gości
+  guestPhone    String?     // Telefon dla zamówień gości
+  guestAddress  String?     // Adres dla zamówień gości
+  guestCity     String?     // Miasto dla zamówień gości
+  guestPostalCode String?   // Kod pocztowy dla zamówień gości
+  guestCountry  String?     // Kraj dla zamówień gości
+  wantsInvoice  Boolean     @default(false) // Czy chce fakturę
+  invoiceData   String?     // Dane do faktury (JSON)
+  
+  // Nowe pola dla śledzenia zamówień
+  trackingNumber String?    // Numer śledzenia kuriera
+  courier        String?    // Nazwa kuriera (DHL, UPS, InPost, etc.)
+  estimatedDelivery DateTime? // Szacowana data dostawy
+  actualDelivery DateTime?    // Rzeczywista data dostawy
+  deliveryNotes String?       // Notatki dotyczące dostawy
+  trackingUrl   String?       // URL do śledzenia na stronie kuriera
+  
+  // Historia statusów
+  statusHistory OrderStatusHistory[]
+  
+  // Kupon rabatowy
+  couponId      String?
+  coupon        Coupon?    @relation(fields: [couponId], references: [id])
+  discountAmount Float?    // Kwota rabatu z kuponu
+  
+  // Program lojalnościowy
+  loyaltyTransactions LoyaltyTransaction[]
+  
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+
+  @@index([userId])
+}
+
+model ShippingAddress {
+  id        String @id @default(cuid())
+  orderId   String @unique
+  order     Order  @relation(fields: [orderId], references: [id])
+  firstName String
+  lastName  String
+  email     String
+  phone     String
+  address   String
+  city      String
+  postalCode String
+  country   String @default("Polska")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model OrderItem {
+  id        String @id @default(cuid())
+  orderId   String
+  order     Order  @relation(fields: [orderId], references: [id])
+  productId String
+  product   Product @relation(fields: [productId], references: [id])
+  quantity  Int
+  price     Float
+
+  @@index([orderId])
+  @@index([productId])
+}
+
+model OrderStatusHistory {
+  id        String      @id @default(cuid())
+  orderId   String
+  order     Order       @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  status    OrderStatus
+  note      String?     // Opcjonalna notatka do zmiany statusu
+  createdAt DateTime    @default(now())
+
+  @@index([orderId])
+  @@index([status])
+  @@index([createdAt])
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+enum Gender {
+  MALE
+  FEMALE
+  OTHER
+  PREFER_NOT_TO_SAY
+}
+
+enum OrderStatus {
+  PENDING
+  CONFIRMED
+  SHIPPED
+  DELIVERED
+  CANCELLED
+}
+
+enum PaymentStatus {
+  PENDING
+  PAID
+  FAILED
+  REFUNDED
+}
+
+model Review {
+  id        String   @id @default(cuid())
+  productId String
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  userId    String?
+  user      User?    @relation(fields: [userId], references: [id])
+  rating    Int      // 1-5 stars
+  title     String
+  content   String
+  name      String   // Name for guest reviews
+  email     String?  // Email for guest reviews
+  verified  Boolean  @default(false) // Verified purchase
+  approved  Boolean  @default(false) // Admin approval
+  
+  // Nowe pola dla zaawansowanego systemu recenzji
+  helpful   Int      @default(0)     // Liczba "Czy ta recenzja była pomocna?"
+  images    String[] // Zdjęcia dołączone do recenzji
+  pros      String?  // Zalety produktu
+  cons      String?  // Wady produktu
+  size      String?  // Rozmiar (dla odzieży)
+  color     String?  // Kolor (dla produktów z opcjami)
+  orderId   String?  // ID zamówienia dla weryfikacji
+  isAnonymous Boolean @default(false) // Anonimowa recenzja
+  
+  // Moderacja
+  moderatedBy String? // ID moderatora
+  moderatedAt DateTime?
+  moderationNote String? // Notatka moderatora
+  
+  // Interakcje
+  helpfulVotes ReviewHelpfulVote[]
+  replies     ReviewReply[]
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([productId])
+  @@index([userId])
+  @@index([approved])
+  @@index([verified])
+  @@index([rating])
+  @@index([createdAt])
+}
+
+model ReviewHelpfulVote {
+  id       String @id @default(cuid())
+  reviewId String
+  review   Review @relation(fields: [reviewId], references: [id], onDelete: Cascade)
+  userId   String
+  user     User   @relation(fields: [userId], references: [id])
+  isHelpful Boolean @default(true)
+  createdAt DateTime @default(now())
+
+  @@unique([reviewId, userId])
+  @@index([reviewId])
+  @@index([userId])
+}
+
+model ReviewReply {
+  id       String @id @default(cuid())
+  reviewId String
+  review   Review @relation(fields: [reviewId], references: [id], onDelete: Cascade)
+  userId   String
+  user     User   @relation(fields: [userId], references: [id])
+  content  String
+  isOfficial Boolean @default(false) // Odpowiedź od sklepu
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([reviewId])
+  @@index([userId])
+}
+
+model Wishlist {
+  id        String @id @default(cuid())
+  userId    String
+  user      User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  productId String
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([userId, productId])
+  @@index([userId])
+  @@index([productId])
+  @@index([createdAt])
+}
+
+model StockNotification {
+  id        String @id @default(cuid())
+  productId String
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  email     String
+  userId    String? // Opcjonalne - dla zalogowanych użytkowników
+  user      User?   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  notified  Boolean @default(false)
+  createdAt DateTime @default(now())
+  notifiedAt DateTime?
+
+  @@unique([productId, email])
+  @@index([productId])
+  @@index([email])
+  @@index([notified])
+  @@index([createdAt])
+}
+
+model Coupon {
+  id          String      @id @default(cuid())
+  code        String      @unique
+  name        String      // Nazwa kuponu (np. "Wakacyjna promocja")
+  description String?     // Opis kuponu
+  type        CouponType  // PERCENTAGE, FIXED_AMOUNT, FREE_SHIPPING
+  value       Float       // Wartość rabatu (procent lub kwota)
+  minOrderValue Float?    // Minimalna wartość zamówienia
+  maxDiscount Float?      // Maksymalna kwota rabatu (dla procentowych)
+  
+  // Limity użycia
+  usageLimit  Int?        // Ograniczenie użyć (null = bez limitu)
+  usedCount   Int         @default(0) // Liczba użyć
+  
+  // Limity czasowe
+  validFrom   DateTime?   // Data rozpoczęcia ważności
+  validUntil  DateTime?   // Data zakończenia ważności
+  
+  // Status
+  isActive    Boolean     @default(true)
+  
+  // Relacje
+  orders      Order[]     // Zamówienia, które użyły tego kuponu
+  
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  @@index([code])
+  @@index([isActive])
+  @@index([validFrom])
+  @@index([validUntil])
+}
+
+enum CouponType {
+  PERCENTAGE      // Rabat procentowy
+  FIXED_AMOUNT    // Rabat kwotowy
+  FREE_SHIPPING   // Darmowa dostawa
+}
+
+model Newsletter {
+  id          String      @id @default(cuid())
+  email       String      @unique
+  firstName   String?     // Opcjonalne imię
+  lastName    String?     // Opcjonalne nazwisko
+  isActive    Boolean     @default(true) // Czy subskrybent jest aktywny
+  source      String?     // Skąd się zapisał (homepage, footer, checkout, etc.)
+  preferences Json?       // Preferencje użytkownika (JSON)
+  subscribedAt DateTime   @default(now())
+  unsubscribedAt DateTime? // Data wypisania się
+  lastEmailSent DateTime? // Ostatnia wysłana wiadomość
+  emailCount  Int         @default(0) // Liczba wysłanych emaili
+  
+  // Relacje
+  userId      String?     // Opcjonalne powiązanie z użytkownikiem
+  user        User?       @relation(fields: [userId], references: [id])
+  
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  @@index([email])
+  @@index([isActive])
+  @@index([subscribedAt])
+  @@index([source])
+}
+
+model NewsletterCampaign {
+  id          String      @id @default(cuid())
+  name        String      // Nazwa kampanii
+  subject     String      // Temat wiadomości
+  content     String      // Treść wiadomości (HTML)
+  template    String?     // Szablon wiadomości
+  status      CampaignStatus @default(DRAFT) // DRAFT, SCHEDULED, SENDING, SENT, FAILED
+  scheduledAt DateTime?   // Zaplanowana data wysłania
+  sentAt      DateTime?   // Rzeczywista data wysłania
+  recipientCount Int      @default(0) // Liczba odbiorców
+  sentCount   Int         @default(0) // Liczba wysłanych
+  openedCount Int         @default(0) // Liczba otwartych
+  clickedCount Int        @default(0) // Liczba kliknięć
+  errorCount  Int         @default(0) // Liczba błędów
+  
+  // Filtry odbiorców
+  filters     Json?       // Filtry dla odbiorców (JSON)
+  
+  // Relacje
+  createdBy   String?     // ID użytkownika, który utworzył kampanię
+  user        User?       @relation(fields: [createdBy], references: [id])
+  
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  @@index([status])
+  @@index([scheduledAt])
+  @@index([sentAt])
+}
+
+model NewsletterTemplate {
+  id          String      @id @default(cuid())
+  name        String      // Nazwa szablonu
+  description String?     // Opis szablonu
+  subject     String      // Domyślny temat
+  content     String      // Treść szablonu (HTML)
+  variables   Json?       // Dostępne zmienne (JSON)
+  isDefault   Boolean     @default(false) // Czy to domyślny szablon
+  isActive    Boolean     @default(true) // Czy szablon jest aktywny
+  
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  @@index([isActive])
+  @@index([isDefault])
+}
+
+enum CampaignStatus {
+  DRAFT       // Szkic
+  SCHEDULED   // Zaplanowana
+  SENDING     // Wysyłana
+  SENT        // Wysłana
+  FAILED      // Błąd
+}
+
+// System rekomendacji
+model UserBehavior {
+  id          String      @id @default(cuid())
+  userId      String?     // Opcjonalne - dla gości może być null
+  sessionId   String?     // ID sesji dla gości
+  productId   String
+  product     Product      @relation(fields: [productId], references: [id])
+  behaviorType BehaviorType // VIEW, ADD_TO_CART, PURCHASE, WISHLIST, SEARCH
+  metadata    Json?       // Dodatkowe dane (czas oglądania, źródło, etc.)
+  createdAt   DateTime    @default(now())
+
+  @@index([userId])
+  @@index([sessionId])
+  @@index([productId])
+  @@index([behaviorType])
+  @@index([createdAt])
+}
+
+model ProductRecommendation {
+  id              String      @id @default(cuid())
+  userId          String?     // Opcjonalne - dla gości
+  sessionId       String?     // ID sesji dla gości
+  productId       String
+  product         Product      @relation(fields: [productId], references: [id])
+  recommendedProductId String
+  recommendedProduct Product   @relation("ProductRecommendations", fields: [recommendedProductId], references: [id])
+  recommendationType RecommendationType
+  score           Float       // Wartość rekomendacji (0-1)
+  reason          String?     // Powód rekomendacji
+  createdAt       DateTime    @default(now())
+  expiresAt       DateTime?   // Kiedy rekomendacja wygasa
+
+  @@index([userId])
+  @@index([sessionId])
+  @@index([productId])
+  @@index([recommendedProductId])
+  @@index([recommendationType])
+  @@index([score])
+}
+
+model ProductSimilarity {
+  id              String      @id @default(cuid())
+  productId       String
+  product         Product      @relation(fields: [productId], references: [id])
+  similarProductId String
+  similarProduct  Product      @relation("SimilarProducts", fields: [similarProductId], references: [id])
+  similarityScore Float       // Wartość podobieństwa (0-1)
+  algorithm       String      // Nazwa algorytmu użytego do obliczenia
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+
+  @@unique([productId, similarProductId])
+  @@index([productId])
+  @@index([similarProductId])
+  @@index([similarityScore])
+}
+
+model UserPreference {
+  id          String      @id @default(cuid())
+  userId      String
+  user        User        @relation(fields: [userId], references: [id])
+  categoryId  String?
+  category    Category?   @relation(fields: [categoryId], references: [id])
+  preferenceType PreferenceType // CATEGORY, BRAND, PRICE_RANGE, COLOR, etc.
+  value       String      // Wartość preferencji
+  weight      Float       @default(1.0) // Waga preferencji
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  @@index([userId])
+  @@index([preferenceType])
+  @@index([value])
+}
+
+enum BehaviorType {
+  VIEW           // Oglądanie produktu
+  ADD_TO_CART    // Dodanie do koszyka
+  PURCHASE       // Zakup
+  WISHLIST       // Dodanie do listy życzeń
+  SEARCH         // Wyszukiwanie
+  COMPARE        // Porównywanie
+  REVIEW         // Recenzja
+}
+
+enum RecommendationType {
+  SIMILAR_PRODUCTS    // Podobne produkty
+  FREQUENTLY_BOUGHT   // Często kupowane razem
+  RECENTLY_VIEWED     // Ostatnio oglądane
+  TRENDING            // Popularne
+  PERSONALIZED       // Spersonalizowane
+  SEASONAL           // Sezonowe
+  PRICE_BASED        // Na podstawie ceny
+  CATEGORY_BASED     // Na podstawie kategorii
+}
+
+enum PreferenceType {
+  CATEGORY      // Preferencje kategorii
+  BRAND         // Preferencje marki
+  PRICE_RANGE   // Preferencje cenowe
+  COLOR         // Preferencje kolorów
+  SIZE          // Preferencje rozmiarów
+  STYLE         // Preferencje stylu
+}
+
+// Program lojalnościowy
+model LoyaltyProgram {
+  id          String      @id @default(cuid())
+  name        String      // Nazwa programu (np. "Tulinki VIP")
+  description String?     // Opis programu
+  isActive    Boolean     @default(true) // Czy program jest aktywny
+  pointsPerZloty Float    @default(1.0) // Punkty za każdego złotego
+  minOrderValue Float?    // Minimalna wartość zamówienia do naliczenia punktów
+  maxPointsPerOrder Int?  // Maksymalne punkty za jedno zamówienie
+  expirationDays Int?     // Po ilu dniach punkty wygasają (null = bez limitu)
+  
+  // Ustawienia poziomów
+  levels      LoyaltyLevel[]
+  
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  @@index([isActive])
+}
+
+model LoyaltyLevel {
+  id          String      @id @default(cuid())
+  programId   String
+  program     LoyaltyProgram @relation(fields: [programId], references: [id], onDelete: Cascade)
+  name        String      // Nazwa poziomu (np. "Bronze", "Silver", "Gold")
+  description String?     // Opis poziomu
+  minPoints   Int         // Minimalne punkty do osiągnięcia poziomu
+  maxPoints   Int?        // Maksymalne punkty dla tego poziomu
+  color       String?     // Kolor poziomu (hex)
+  icon        String?     // Ikona poziomu
+  benefits    Json?       // Benefity poziomu (JSON)
+  isActive    Boolean     @default(true)
+  order       Int         @default(0) // Kolejność poziomów
+  
+  // Relacje
+  users       LoyaltyUser[]
+  
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  @@index([programId])
+  @@index([minPoints])
+  @@index([order])
+}
+
+model LoyaltyUser {
+  id          String      @id @default(cuid())
+  userId      String
+  user        User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  programId   String
+  program     LoyaltyProgram @relation(fields: [programId], references: [id])
+  levelId     String
+  level       LoyaltyLevel @relation(fields: [levelId], references: [id])
+  
+  // Punkty
+  totalPoints Int         @default(0) // Całkowite punkty
+  availablePoints Int     @default(0) // Dostępne punkty (do wykorzystania)
+  usedPoints  Int         @default(0) // Wykorzystane punkty
+  expiredPoints Int       @default(0) // Wygasłe punkty
+  
+  // Statystyki
+  totalOrders Int         @default(0) // Całkowita liczba zamówień
+  totalSpent  Float       @default(0) // Całkowita kwota wydana
+  lastOrderAt DateTime?   // Data ostatniego zamówienia
+  
+  // Status
+  isActive    Boolean     @default(true)
+  joinedAt    DateTime    @default(now())
+  lastActivityAt DateTime @default(now())
+  
+  // Relacje
+  transactions LoyaltyTransaction[]
+  rewards     LoyaltyReward[]
+  
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  @@unique([userId, programId])
+  @@index([userId])
+  @@index([programId])
+  @@index([levelId])
+  @@index([totalPoints])
+  @@index([isActive])
+}
+
+model LoyaltyTransaction {
+  id          String      @id @default(cuid())
+  userId      String
+  user        User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  loyaltyUserId String
+  loyaltyUser LoyaltyUser @relation(fields: [loyaltyUserId], references: [id], onDelete: Cascade)
+  
+  // Typ transakcji
+  type        LoyaltyTransactionType
+  points      Int         // Punkty (dodatnie = naliczenie, ujemne = wykorzystanie)
+  description String      // Opis transakcji
+  
+  // Powiązanie z zamówieniem
+  orderId     String?     // ID zamówienia (jeśli dotyczy)
+  order       Order?      @relation(fields: [orderId], references: [id])
+  
+  // Powiązanie z nagrodą
+  rewardId    String?     // ID nagrody (jeśli dotyczy)
+  reward      LoyaltyReward? @relation(fields: [rewardId], references: [id])
+  
+  // Powiązanie z referral
+  referralId  String?     // ID referral (jeśli dotyczy)
+  referral    ReferralProgram? @relation(fields: [referralId], references: [id])
+  
+  // Daty
+  expiresAt   DateTime?   // Kiedy punkty wygasają
+  processedAt DateTime    @default(now())
+  
+  createdAt   DateTime    @default(now())
+
+  @@index([userId])
+  @@index([loyaltyUserId])
+  @@index([type])
+  @@index([orderId])
+  @@index([processedAt])
+}
+
+model LoyaltyReward {
+  id          String      @id @default(cuid())
+  name        String      // Nazwa nagrody
+  description String?     // Opis nagrody
+  type        RewardType  // Typ nagrody
+  value       Float       // Wartość nagrody
+  pointsCost  Int         // Koszt w punktach
+  isActive    Boolean     @default(true)
+  isLimited   Boolean     @default(false) // Czy ma limit użyć
+  usageLimit  Int?        // Limit użyć
+  usedCount   Int         @default(0) // Liczba użyć
+  
+  // Warunki
+  minOrderValue Float?    // Minimalna wartość zamówienia
+  maxDiscount   Float?    // Maksymalna kwota rabatu
+  validFrom     DateTime? // Ważne od
+  validUntil    DateTime? // Ważne do
+  
+  // Relacje
+  loyaltyUserId String?
+  loyaltyUser   LoyaltyUser? @relation(fields: [loyaltyUserId], references: [id])
+  transactions  LoyaltyTransaction[]
+  
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  @@index([isActive])
+  @@index([type])
+  @@index([pointsCost])
+}
+
+model ReferralProgram {
+  id          String      @id @default(cuid())
+  name        String      // Nazwa programu referral
+  description String?     // Opis programu
+  isActive    Boolean     @default(true)
+  
+  // Ustawienia
+  referrerReward Int      @default(100) // Punkty dla polecającego
+  refereeReward  Int      @default(50)  // Punkty dla poleconego
+  minOrderValue  Float?   // Minimalna wartość zamówienia dla nagrody
+  maxReferrals   Int?     // Maksymalna liczba poleceń na użytkownika
+  
+  // Relacje
+  referrals   Referral[]
+  transactions LoyaltyTransaction[]
+  
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  @@index([isActive])
+}
+
+model Referral {
+  id          String      @id @default(cuid())
+  programId   String
+  program     ReferralProgram @relation(fields: [programId], references: [id])
+  referrerId  String      // ID użytkownika polecającego
+  referrer    User        @relation("Referrer", fields: [referrerId], references: [id])
+  refereeId   String      // ID użytkownika poleconego
+  referee     User        @relation("Referee", fields: [refereeId], references: [id])
+  
+  // Status
+  status      ReferralStatus @default(PENDING)
+  rewardGiven Boolean     @default(false) // Czy nagroda została przyznana
+  
+  // Dane
+  refereeEmail String?    // Email poleconego (jeśli nie ma konta)
+  refereeName  String?    // Imię poleconego
+  referralCode String     @unique // Unikalny kod referral
+  
+  // Daty
+  completedAt DateTime?   // Kiedy referral został ukończony
+  rewardedAt  DateTime?   // Kiedy nagroda została przyznana
+  
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  @@unique([referrerId, refereeId])
+  @@index([programId])
+  @@index([referrerId])
+  @@index([refereeId])
+  @@index([status])
+  @@index([referralCode])
+}
+
+enum LoyaltyTransactionType {
+  EARNED          // Naliczone punkty
+  SPENT           // Wykorzystane punkty
+  EXPIRED         // Wygasłe punkty
+  BONUS           // Bonusowe punkty
+  REFERRAL        // Punkty za referral
+  ADMIN_ADJUSTMENT // Korekta przez admina
+}
+
+enum RewardType {
+  DISCOUNT        // Rabat procentowy
+  FIXED_DISCOUNT  // Rabat kwotowy
+  FREE_SHIPPING   // Darmowa dostawa
+  GIFT            // Prezent
+  VOUCHER         // Voucher
+  POINTS          // Dodatkowe punkty
+}
+
+enum ReferralStatus {
+  PENDING         // Oczekuje
+  COMPLETED       // Ukończony
+  EXPIRED         // Wygasł
+  CANCELLED       // Anulowany
+}
+
+model PageModule {
+  id        String   @id @default(cuid())
+  pageId    String
+  page      Page     @relation(fields: [pageId], references: [id], onDelete: Cascade)
+  type      String   // hero, features, testimonials, products, gallery, text, etc.
+  title     String?
+  content   Json     // Flexible content structure
+  order     Int      @default(0)
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([pageId])
+  @@index([type])
+  @@index([order])
+}
+
+model Page {
+  id          String        @id @default(cuid())
+  title       String
+  slug        String        @unique
+  description String?
+  metaTitle   String?
+  metaDescription String?
+  active      Boolean       @default(true)
+  modules     PageModule[]
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  @@index([slug])
+  @@index([active])
+}
