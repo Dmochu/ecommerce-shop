@@ -13,7 +13,7 @@ const nextConfig = {
     ignoreBuildErrors: false,
   },
   // Wyłącz prerenderowanie dla wszystkich stron (będą renderowane na żądanie)
-  output: 'standalone',
+  output: 'standalone' as const,
 }
 
 export default withNextIntl(nextConfig)
