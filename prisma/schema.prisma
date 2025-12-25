@@ -33,6 +33,7 @@ model Product {
   stockNotifications StockNotification[]
   userBehaviors UserBehavior[]
   recommendations ProductRecommendation[]
+  recommendedProducts ProductRecommendation[] @relation("ProductRecommendations")
   similarProducts ProductSimilarity[]
   similarToProducts ProductSimilarity[] @relation("SimilarProducts")
 
@@ -120,7 +121,7 @@ model User {
   reviewReplies ReviewReply[]
   wishlist  Wishlist[]
   stockNotifications StockNotification[]
-  newsletter Newsletter?
+  newsletterSubscription Newsletter? @relation("NewsletterSubscription")
   newsletterCampaigns NewsletterCampaign[]
   userBehaviors UserBehavior[]
   preferences UserPreference[]
@@ -439,8 +440,8 @@ model Newsletter {
   emailCount  Int         @default(0) // Liczba wysłanych emaili
   
   // Relacje
-  userId      String?     // Opcjonalne powiązanie z użytkownikiem
-  user        User?       @relation(fields: [userId], references: [id])
+  userId      String?     @unique // Opcjonalne powiązanie z użytkownikiem (unique dla one-to-one)
+  user        User?       @relation("NewsletterSubscription", fields: [userId], references: [id])
   
   createdAt   DateTime    @default(now())
   updatedAt   DateTime    @updatedAt
@@ -510,6 +511,7 @@ enum CampaignStatus {
 model UserBehavior {
   id          String      @id @default(cuid())
   userId      String?     // Opcjonalne - dla gości może być null
+  user        User?       @relation(fields: [userId], references: [id])
   sessionId   String?     // ID sesji dla gości
   productId   String
   product     Product      @relation(fields: [productId], references: [id])
@@ -623,6 +625,7 @@ model LoyaltyProgram {
   
   // Ustawienia poziomów
   levels      LoyaltyLevel[]
+  users       LoyaltyUser[]
   
   createdAt   DateTime    @default(now())
   updatedAt   DateTime    @updatedAt
