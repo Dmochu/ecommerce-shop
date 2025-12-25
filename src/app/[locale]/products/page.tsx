@@ -2,7 +2,6 @@ import { prisma } from '@/lib/prisma'
 import ProductCard from '@/components/ProductCard'
 import CategoryFilter from '@/components/CategoryFilter'
 import AdvancedFilters from '@/components/AdvancedFilters'
-import SearchResults from '@/components/SearchResults'
 import { searchProducts, searchProductsWithFilters } from '@/lib/search'
 
 interface ProductsPageProps {
