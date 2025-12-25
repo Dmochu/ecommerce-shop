@@ -333,6 +333,146 @@
   "returns": {
     "title": "Vrácení",
     "description": "Informace o vrácení produktů",
-    "backToHome": "Zpět na hlavní stránku"
+    "backToHome": "Zpět na hlavní stránku",
+    "quickActions": {
+      "returnForm": {
+        "title": "Formulář vrácení",
+        "description": "Podat žádost o vrácení produktu"
+      },
+      "complaintForm": {
+        "title": "Formulář reklamace",
+        "description": "Podat reklamaci produktu"
+      }
+    },
+    "returnPolicy": {
+      "title": "Politika vrácení",
+      "timeframe": {
+        "title": "Lhůta pro vrácení",
+        "content": "14 dní na vrácení produktu"
+      },
+      "conditions": {
+        "title": "Podmínky vrácení",
+        "content": "Produkt musí být v původním stavu"
+      },
+      "shipping": {
+        "title": "Náklady na dopravu",
+        "content": "Vrácení na náklady zákazníka"
+      },
+      "details": {
+        "title": "Detaily",
+        "item1": "Produkt musí být nepoužitý",
+        "item2": "Vyžaduje se původní obal",
+        "item3": "Doklady o nákupu musí být přiloženy",
+        "item4": "Vrácení do 14 dnů od přijetí",
+        "item5": "Vrácení peněz do 14 pracovních dnů"
+      }
+    },
+    "complaintProcess": {
+      "title": "Proces reklamace",
+      "step1": {
+        "title": "Podat reklamaci",
+        "content": "Vyplňte online formulář reklamace"
+      },
+      "step2": {
+        "title": "Ověření",
+        "content": "Zkontrolujeme vaši reklamaci"
+      },
+      "step3": {
+        "title": "Zpracování",
+        "content": "Zpracujeme vaši reklamaci do 7 dnů"
+      },
+      "step4": {
+        "title": "Řešení",
+        "content": "Obdržíte odpověď a řešení"
+      }
+    },
+    "contact": {
+      "title": "Kontakt",
+      "email": {
+        "title": "E-mail",
+        "content": "Kontaktujte nás e-mailem"
+      },
+      "phone": {
+        "title": "Telefon",
+        "content": "Zavolejte nám"
+      }
+    }
+  },
+  "complaintForm": {
+    "title": "Formulář reklamace",
+    "description": "Vyplňte formulář pro podání reklamace",
+    "backToHome": "Zpět na hlavní stránku",
+    "form": {
+      "orderNumber": "Číslo objednávky",
+      "customerName": "Jméno a příjmení",
+      "email": "E-mail",
+      "phone": "Telefon",
+      "complaintType": "Typ reklamace",
+      "selectComplaintType": "Vyberte typ reklamace",
+      "types": {
+        "productQuality": "Kvalita produktu",
+        "deliveryIssue": "Problém s dodáním",
+        "customerService": "Zákaznický servis",
+        "paymentIssue": "Problém s platbou",
+        "websiteIssue": "Problém se stránkou",
+        "other": "Jiné"
+      },
+      "description": "Popis",
+      "descriptionPlaceholder": "Podrobně popište problém...",
+      "expectedResolution": "Očekávané řešení",
+      "expectedResolutionPlaceholder": "Jaké řešení očekáváte?",
+      "submit": "Odeslat"
+    },
+    "success": {
+      "title": "Reklamace byla odeslána",
+      "message": "Děkujeme za nahlášení. Brzy vás budeme kontaktovat.",
+      "backToHome": "Zpět na hlavní stránku"
+    }
+  },
+  "returnForm": {
+    "title": "Formulář vrácení",
+    "subtitle": "Vyplňte formulář pro podání žádosti o vrácení produktu",
+    "orderNumber": "Číslo objednávky",
+    "customerName": "Jméno a příjmení",
+    "email": "E-mail",
+    "phone": "Telefon",
+    "address": "Adresa",
+    "city": "Město",
+    "postalCode": "PSČ",
+    "country": "Země",
+    "isBusiness": "Firma",
+    "companyName": "Název firmy",
+    "nip": "IČO",
+    "reason": "Důvod vrácení",
+    "description": "Popis",
+    "priority": "Priorita",
+    "preferredContactMethod": "Preferovaná metoda kontaktu",
+    "orderDate": "Datum objednávky",
+    "returnReason": "Důvod vrácení",
+    "refundMethod": "Metoda vrácení",
+    "submit": "Odeslat",
+    "backToHome": "Zpět na hlavní stránku",
+    "success": "Formulář byl úspěšně odeslán!",
+    "error": "Při odesílání formuláře došlo k chybě"
+  },
+  "profile": {
+    "title": "Profil",
+    "edit": "Upravit profil",
+    "save": "Uložit změny",
+    "personalInfo": "Osobní údaje",
+    "name": "Jméno a příjmení",
+    "email": "E-mail",
+    "phone": "Telefon",
+    "address": "Adresa",
+    "city": "Město",
+    "postalCode": "PSČ",
+    "country": "Země",
+    "orders": "Objednávky",
+    "noOrders": "Žádné objednávky",
+    "viewOrder": "Zobrazit objednávku"
+  },
+  "privacy": {
+    "title": "Zásady ochrany osobních údajů",
+    "description": "Zásady ochrany osobních údajů definují pravidla zpracování dat"
   }
 }
