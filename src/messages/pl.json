@@ -431,5 +431,21 @@
         "content": "Weryfikacja transakcji"
       }
     }
+  },
+  "profile": {
+    "title": "Profil",
+    "edit": "Edytuj profil",
+    "save": "Zapisz zmiany",
+    "personalInfo": "Dane osobowe",
+    "name": "Imię i nazwisko",
+    "email": "Email",
+    "phone": "Telefon",
+    "address": "Adres",
+    "city": "Miasto",
+    "postalCode": "Kod pocztowy",
+    "country": "Kraj",
+    "orders": "Zamówienia",
+    "noOrders": "Brak zamówień",
+    "viewOrder": "Zobacz zamówienie"
   }
 }
