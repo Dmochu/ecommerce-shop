@@ -2,23 +2,35 @@ import { NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import bcrypt from 'bcryptjs'
 
-// Endpoint do seedowania bazy danych - tylko dla adminów
+// Endpoint do seedowania bazy danych
 // Uruchom przez: GET /api/admin/seed?secret=YOUR_SECRET
+// Lub: GET /api/admin/seed (tylko jeśli baza jest pusta)
 export async function GET(request: Request) {
   try {
     const { searchParams } = new URL(request.url)
     const secret = searchParams.get('secret')
     
+    // Sprawdź czy baza jest pusta (jeśli tak, pozwól na seed bez secret)
+    const productCount = await prisma.product.count()
+    const categoryCount = await prisma.category.count()
+    const isEmpty = productCount === 0 && categoryCount === 0
+    
     // Prosta ochrona - w produkcji użyj lepszego systemu autoryzacji
     const expectedSecret = process.env.SEED_SECRET
-    if (!expectedSecret || secret !== expectedSecret) {
-      console.log('Seed auth failed:', {
-        provided: secret ? `${secret.substring(0, 10)}...` : 'empty',
-        expected: expectedSecret ? `${expectedSecret.substring(0, 10)}...` : 'empty',
-        match: secret === expectedSecret
-      })
+    
+    // Pozwól na seed jeśli:
+    // 1. Podano poprawny secret LUB
+    // 2. Baza jest pusta (pierwsze uruchomienie)
+    if (!isEmpty && (!expectedSecret || secret !== expectedSecret)) {
       return NextResponse.json(
-        { error: 'Unauthorized', debug: process.env.NODE_ENV === 'development' ? { providedLength: secret?.length, expectedLength: expectedSecret?.length } : undefined },
+        { error: 'Unauthorized. Podaj poprawny secret lub uruchom gdy baza jest pusta.' },
+        { status: 401 }
+      )
+    }
+    
+    if (!isEmpty && secret && secret !== expectedSecret) {
+      return NextResponse.json(
+        { error: 'Unauthorized. Niepoprawny secret.' },
         { status: 401 }
       )
     }
