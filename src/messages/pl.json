@@ -368,5 +368,67 @@
     "backToHome": "Powrót do strony głównej",
     "success": "Formularz został wysłany pomyślnie!",
     "error": "Wystąpił błąd podczas wysyłania formularza"
+  },
+  "complaintForm": {
+    "title": "Formularz reklamacji",
+    "description": "Wypełnij formularz, aby złożyć reklamację",
+    "backToHome": "Powrót do strony głównej",
+    "form": {
+      "orderNumber": "Numer zamówienia",
+      "customerName": "Imię i nazwisko",
+      "email": "Email",
+      "phone": "Telefon",
+      "complaintType": "Typ reklamacji",
+      "selectComplaintType": "Wybierz typ reklamacji",
+      "types": {
+        "productQuality": "Jakość produktu",
+        "deliveryIssue": "Problem z dostawą",
+        "customerService": "Obsługa klienta",
+        "paymentIssue": "Problem z płatnością",
+        "websiteIssue": "Problem ze stroną",
+        "other": "Inne"
+      },
+      "description": "Opis"
+    },
+    "success": {
+      "title": "Reklamacja została wysłana",
+      "message": "Dziękujemy za zgłoszenie. Skontaktujemy się z Tobą wkrótce.",
+      "backToHome": "Powrót do strony głównej"
+    }
+  },
+  "paymentMethods": {
+    "title": "Formy płatności",
+    "description": "Informacje o dostępnych formach płatności",
+    "backToHome": "Powrót do strony głównej",
+    "methods": {
+      "title": "Dostępne metody płatności",
+      "creditCards": {
+        "title": "Karty płatnicze",
+        "description": "Akceptujemy wszystkie główne karty płatnicze"
+      },
+      "mobilePayments": {
+        "title": "Płatności mobilne",
+        "description": "Płatności przez telefon"
+      },
+      "bankTransfer": {
+        "title": "Przelew bankowy",
+        "description": "Tradycyjny przelew bankowy"
+      },
+      "cashOnDelivery": {
+        "title": "Płatność przy odbiorze",
+        "description": "Zapłać przy odbiorze"
+      }
+    },
+    "security": {
+      "title": "Bezpieczeństwo",
+      "ssl": {
+        "title": "Szyfrowanie SSL",
+        "content": "Wszystkie transakcje są szyfrowane"
+      },
+      "verification": {
+        "title": "Weryfikacja",
+        "content": "Weryfikacja transakcji"
+      }
+    }
   }
 }
