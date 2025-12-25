@@ -37,6 +37,14 @@ export default function Header() {
             <SearchAutocomplete 
               placeholder={t('header.searchProducts')}
               className="w-full"
+              onSearch={(query) => {
+                window.location.href = `/search?q=${encodeURIComponent(query)}`
+              }}
+              onSuggestionClick={(suggestion) => {
+                if (suggestion.url) {
+                  window.location.href = suggestion.url
+                }
+              }}
             />
           </div>
 
