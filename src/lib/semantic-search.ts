@@ -55,7 +55,6 @@ export class SemanticSearchEngine {
               OR: [
                 { name: { contains: query, mode: 'insensitive' } },
                 { description: { contains: query, mode: 'insensitive' } },
-                { tags: { has: query } },
                 { brand: { contains: query, mode: 'insensitive' } },
                 // Wyszukiwanie w synonimach
                 ...expandedQuery.synonyms.map(synonym => ({
