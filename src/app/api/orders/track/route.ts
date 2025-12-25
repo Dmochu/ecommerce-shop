@@ -85,7 +85,7 @@ export async function POST(request: NextRequest) {
         price: item.price
       })),
       shippingAddress: order.shippingAddress ? {
-        name: order.shippingAddress.name,
+        name: `${order.shippingAddress.firstName} ${order.shippingAddress.lastName}`,
         address: order.shippingAddress.address,
         city: order.shippingAddress.city,
         postalCode: order.shippingAddress.postalCode,
