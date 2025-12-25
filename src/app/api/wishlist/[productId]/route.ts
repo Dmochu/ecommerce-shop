@@ -6,7 +6,7 @@ const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key'
 
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { productId: string } }
+  { params }: { params: Promise<{ productId: string }> }
 ) {
   try {
     // Sprawdź autoryzację
@@ -31,7 +31,7 @@ export async function DELETE(
       )
     }
 
-    const { productId } = params
+    const { productId } = await params
 
     // Sprawdź czy produkt jest w liście życzeń użytkownika
     const wishlistItem = await prisma.wishlist.findUnique({

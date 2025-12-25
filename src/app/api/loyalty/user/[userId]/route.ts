@@ -4,12 +4,13 @@ import { prisma } from '@/lib/prisma'
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { userId: string } }
+  { params }: { params: Promise<{ userId: string }> }
 ) {
   try {
+    const { userId } = await params
     // Znajdź użytkownika w programie lojalnościowym
     const loyaltyUser = await prisma.loyaltyUser.findFirst({
-      where: { userId: params.userId },
+      where: { userId },
       include: {
         level: true,
         program: true

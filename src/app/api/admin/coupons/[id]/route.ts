@@ -3,11 +3,12 @@ import { prisma } from '@/lib/prisma'
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await params
     const coupon = await prisma.coupon.findUnique({
-      where: { id: params.id },
+      where: { id },
       include: {
         orders: {
           select: {
@@ -47,9 +48,10 @@ export async function GET(
 
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await params
     const {
       name,
       description,
@@ -64,7 +66,7 @@ export async function PUT(
     } = await request.json()
 
     const coupon = await prisma.coupon.update({
-      where: { id: params.id },
+      where: { id },
       data: {
         name,
         description,
@@ -92,12 +94,13 @@ export async function PUT(
 
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await params
     // Sprawdź czy kupon ma zamówienia
     const ordersCount = await prisma.order.count({
-      where: { couponId: params.id }
+      where: { couponId: id }
     })
 
     if (ordersCount > 0) {
@@ -108,7 +111,7 @@ export async function DELETE(
     }
 
     await prisma.coupon.delete({
-      where: { id: params.id }
+      where: { id }
     })
 
     return NextResponse.json({ success: true })

@@ -30,7 +30,7 @@ export default function LoyaltyDashboard() {
     error, 
     enrollInProgram, 
     redeemReward 
-  } = useLoyalty(userId)
+  } = useLoyalty(userId || undefined)
 
   useEffect(() => {
     // W rzeczywistej aplikacji, userId byłby pobierany z sesji/autentykacji
