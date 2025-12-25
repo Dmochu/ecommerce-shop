@@ -212,7 +212,7 @@ export default function SearchPage() {
             results={results}
             total={total}
             loading={loading}
-            error={error}
+            error={error || undefined}
             currentPage={currentPage}
             totalPages={totalPages}
             sortBy={sortBy}
