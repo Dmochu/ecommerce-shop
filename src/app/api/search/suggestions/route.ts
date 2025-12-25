@@ -18,8 +18,7 @@ export async function GET(request: NextRequest) {
         OR: [
           { name: { contains: searchTerm, mode: 'insensitive' } },
           { description: { contains: searchTerm, mode: 'insensitive' } }
-        ],
-        isActive: true
+        ]
       },
       include: {
         category: true,
@@ -35,8 +34,7 @@ export async function GET(request: NextRequest) {
     // Wyszukaj kategorie
     const categories = await prisma.category.findMany({
       where: {
-        name: { contains: searchTerm, mode: 'insensitive' },
-        isActive: true
+        name: { contains: searchTerm, mode: 'insensitive' }
       },
       take: 3
     })
@@ -44,8 +42,7 @@ export async function GET(request: NextRequest) {
     // Wyszukaj marki (jeśli masz pole brand w produkcie)
     const brands = await prisma.product.findMany({
       where: {
-        brand: { contains: searchTerm, mode: 'insensitive' },
-        isActive: true
+        brand: { contains: searchTerm, mode: 'insensitive' }
       },
       select: {
         brand: true
