@@ -3,6 +3,9 @@ import { prisma } from '@/lib/prisma'
 import Link from 'next/link'
 import { CheckCircle, Package, ArrowRight } from 'lucide-react'
 
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
+
 interface PaymentSuccessPageProps {
   searchParams: Promise<{
     orderId?: string

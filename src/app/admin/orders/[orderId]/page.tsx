@@ -2,6 +2,9 @@ import { notFound } from 'next/navigation'
 import { prisma } from '@/lib/prisma'
 import OrderDetailsClient from './OrderDetailsClient'
 
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
+
 interface OrderDetailsPageProps {
   params: Promise<{
     orderId: string
