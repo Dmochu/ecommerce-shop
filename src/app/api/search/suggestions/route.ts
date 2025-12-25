@@ -39,18 +39,6 @@ export async function GET(request: NextRequest) {
       take: 3
     })
 
-    // Wyszukaj marki (jeśli masz pole brand w produkcie)
-    const brands = await prisma.product.findMany({
-      where: {
-        brand: { contains: searchTerm, mode: 'insensitive' }
-      },
-      select: {
-        brand: true
-      },
-      distinct: ['brand'],
-      take: 3
-    })
-
     // Stwórz sugestie
     const suggestions = []
 
@@ -82,19 +70,6 @@ export async function GET(request: NextRequest) {
         subtitle: 'Kategoria',
         url: `/categories/${category.id}`
       })
-    })
-
-    // Marki
-    brands.forEach(brand => {
-      if (brand.brand) {
-        suggestions.push({
-          id: `brand-${brand.brand}`,
-          type: 'brand',
-          title: brand.brand,
-          subtitle: 'Marka',
-          url: `/brands/${brand.brand}`
-        })
-      }
     })
 
     // Dodaj sugestie na podstawie popularnych wyszukiwań
